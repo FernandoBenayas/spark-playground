@@ -1,0 +1,19 @@
+version: 3.8
+services:
+    spark-master:
+        image: fernandobenayas/spark-master:1.0
+        ports: 
+            - "4040:4040"
+            - "8080:8080"
+            - "7077"
+        networks:
+            - sparknet
+    spark-worker:
+        image: fernandobenayas/spark-worker:1.0
+        ports: 
+            - "8081:8081"
+            - "7078"
+        networks:
+            - sparknet
+
+        
