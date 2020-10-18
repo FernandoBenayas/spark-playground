@@ -3,7 +3,7 @@ FROM debian:bullseye
 # Pre-requisites
 RUN apt-get update -y
 RUN apt-get install default-jdk wget python3 scala r-base r-base-dev \
- -y
+procps -y
 # Delete this after you are done with tests
 RUN apt-get install init -y
 
@@ -17,13 +17,10 @@ ENV PATH "/opt/spark:/opt/spark/bin:/opt/spark/sbin:${PATH}"
 # Exposing master Web UI and driver Cluster and WebUI ports
 EXPOSE 8080 7077 4040
 
-# Configure Spark ENVS
-ENV PYSPARK_PYTHON python3
-ENV SPARK_MASTER_HOST spark-master
-ENV SPARK_MASTER_PORT 7077
-ENV SPARK_MASTER_WEBUI_PORT 8080
+# Container ENVs are configured in Compose file
 
 # Check SPARK 3.0.1 binaries in docs
 # Needed for Java 11: -Dio.netty.tryReflectionSetAccessible=true
 WORKDIR /
-CMD ["/sbin/init"]
+COPY master-entrypoint.sh /bin
+ENTRYPOINT [ "/bin/master-entrypoint.sh" ]
