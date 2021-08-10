@@ -1,0 +1,3 @@
+- Mind the "action vs transformation" subject
+- Spark (transformations) is lazy. Code is executed only when actions are specified
+- Spark does not support two contexts running concurrently in the same program
