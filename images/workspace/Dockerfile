@@ -5,8 +5,8 @@ RUN apt-get update -y && apt-get install -y default-jdk wget python3 scala r-bas
 RUN echo "deb https://repo.scala-sbt.org/scalasbt/debian all main" | tee /etc/apt/sources.list.d/sbt.list
 RUN echo "deb https://repo.scala-sbt.org/scalasbt/debian /" | tee /etc/apt/sources.list.d/sbt_old.list
 RUN curl -sL "https://keyserver.ubuntu.com/pks/lookup?op=get&search=0x2EE0EA64E40A89B84B2DF73499E82A75642AC823" | apt-key add
-RUN apt-get update -y
-RUN apt-get install -y sbt
+RUN apt-get --allow-insecure-repositories -y update
+RUN apt-get install --allow-unauthenticated -y sbt
 RUN pip3 install pyspark requests requests_oauthlib google google-api-python-client
 # Delete this after you are done with tests
 RUN apt-get install init -y
@@ -15,7 +15,7 @@ RUN apt-get install init -y
 EXPOSE 6006
 
 # Copying app files
-COPY helloVantage /opt/helloVantage
+COPY schemaJSON /opt/projects/schemaJSON
 
 # Container ENVs are configured in Compose file
 

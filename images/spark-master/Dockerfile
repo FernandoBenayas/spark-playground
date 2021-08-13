@@ -16,7 +16,7 @@ RUN mv spark-3.1.2-bin-hadoop3.2 spark
 ENV PATH "/opt/spark:/opt/spark/bin:/opt/spark/sbin:${PATH}"
 
 # Exposing master Web UI and driver Cluster and WebUI ports
-EXPOSE 8080 7077 4040
+EXPOSE 8080 7077 4040 18080
 
 # Container ENVs are configured in Compose file
 

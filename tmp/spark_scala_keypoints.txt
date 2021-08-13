@@ -1,3 +1,5 @@
 - Mind the "action vs transformation" subject
 - Spark (transformations) is lazy. Code is executed only when actions are specified
 - Spark does not support two contexts running concurrently in the same program
+- When reading stuff from files, schemas are always configured with nullable fields (see https://issues.apache.org/jira/browse/SPARK-10848)
+- REMEMBER THE PARTITIONS - PARALLELIZE
