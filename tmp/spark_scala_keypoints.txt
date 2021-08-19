@@ -3,3 +3,6 @@
 - Spark does not support two contexts running concurrently in the same program
 - When reading stuff from files, schemas are always configured with nullable fields (see https://issues.apache.org/jira/browse/SPARK-10848)
 - REMEMBER THE PARTITIONS - PARALLELIZE
+- When transforming, .select is better than .withColumn, particularly when dealing with lots of column
+- Remember that Dataframes are immutable. Whenever you perform transformations on them, you are creating new Dataframes
+- Add Window Functions examples to basicTransformations for window operations

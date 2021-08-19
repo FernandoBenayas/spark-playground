@@ -16,6 +16,7 @@ EXPOSE 6006
 
 # Copying app files
 COPY schemaJSON /opt/projects/schemaJSON
+COPY basicTransformations /opt/projects/basicTransformations
 
 # Container ENVs are configured in Compose file
 
