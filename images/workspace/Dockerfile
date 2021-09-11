@@ -15,8 +15,9 @@ RUN apt-get install init -y
 EXPOSE 6006
 
 # Copying app files
-COPY schemaJSON /opt/projects/schemaJSON
-COPY basicTransformations /opt/projects/basicTransformations
+COPY schemaJSON /home/projects/schemaJSON
+COPY basicTransformations /home/projects/basicTransformations
+COPY mllib /home/projects/mllib
 
 # Container ENVs are configured in Compose file
 

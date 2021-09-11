@@ -70,17 +70,17 @@ object WindowStats {
                 StructField("title", StringType, true)
             )
         )
-
-        val windowSpec = Window.orderBy("date")
         
         val eventsDF = spark.read.schema(customSchemaBis).option("multiline", true).json("/opt/eonet_api.json")
-        eventsDF.printSchema()
 
         val explodedEventsDF = eventsDF.select(col("description"), col("link"), col("title"), explode(col("events")).as("event"))
         val explodedDataDF = explodedEventsDF.select(col("event"), explode(col("event.geometry")).as("geometry"))
             .select(col("event.id").as("event"), col("event.categories").as("category"), col("geometry.date"), col("geometry.magnitudeValue"))
             .na.drop(Seq("magnitudeValue"))
-        val sortedDataDF = explodedDataDF.groupBy("event", "category.id", "date").agg(avg(col("magnitudeValue"))).sort(desc("date"))
+        
+        // The "orderBy" function also adds to the partition (see results)
+        val windowSpec = Window.orderBy("date").partitionBy("category.id")
+        val windowDataDF = explodedDataDF.select(avg("magnitudeValue").over(windowSpec).as("WindowSpecAvg"), col("category.id"), col("event"), col("date")).show(100)
     }
 }
 

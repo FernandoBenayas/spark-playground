@@ -14,79 +14,67 @@ import org.joda.time.DateTime
 
 import org.json4s.DefaultFormats
 
-object WindowStats {
+object BasicMllib {
 
     def main(args: Array[String]) {
 
         val spark = SparkSession.builder()
-            .appName("schemaJSONExample")
+            .appName("basicMllibExample")
             .master("spark://spark-master:7077")
             .config("spark.submit.deployMode", "cluster")
             .getOrCreate
 
         val customSchemaBis = StructType(
             Array(
-                StructField("description", StringType, true),
-                StructField("events", ArrayType(
+                StructField("COD", StringType, true),
+                StructField("Nombre", StringType, true),
+                StructField("T3_Unidad", StringType, true),
+                StructField("T3_Escala", StringType, true),
+                StructField("MetaData", ArrayType(
                     StructType(
                         Array(
-                            StructField("categories", ArrayType(
-                                StructType(
-                                    Array(
-                                        StructField("id", StringType, true),
-                                        StructField("title", StringType, true)
-                                    )
-                                ), true),
-                            true), 
-                            StructField("closed", StringType, true),
-                            StructField("description", StringType, true),
-                            StructField("geometry", ArrayType(
-                                StructType(
-                                    Array(
-                                        StructField("coordinates", ArrayType(
-                                            StringType, true), 
-                                        true),
-                                        StructField("date", DateType, true),
-                                        StructField("magnitudeUnit", StringType, true),
-                                        StructField("magnitudeValue", DoubleType, true),
-                                        StructField("type", StringType, true)
-                                    )
-                                ),
-                            true), true),
-                            StructField("id", StringType, true),
-                            StructField("link", StringType, true),
-                            StructField("sources", ArrayType(
-                                StructType(
-                                    Array(
-                                        StructField("id", StringType, true),
-                                        StructField("url", StringType, true)
-                                    )
-                                ),
-                            true), true),
-                            StructField("title", StringType, true)
+                            StructField("Id", IntegerType, true),
+                            StructField("Variable", StructType(
+                                Array(
+                                    StructField("Id", IntegerType, true),
+                                    StructField("Nombre", StringType, true),
+                                    StructField("Codigo", StringType, true)
+                                )),
+                            true),
+                            StructField("Nombre", StringType, true),
+                            StructField("Codigo", StringType, true)
                         )
                     ),
                 true), true),
-                StructField("link", StringType, true),
-                StructField("title", StringType, true)
+                StructField("Data", ArrayType(
+                    StructType(
+                        Array(
+                            StructField("Fecha", TimestampType, true),
+                            StructField("T3_TipoDato", StringType, true),
+                            StructField("T3_Periodo", StringType, true),
+                            StructField("Anyo", ShortType, true),
+                            StructField("Valor", FloatType, true)
+                        )
+                    ),
+                true), true)
             )
         )
-
-        val linerReg = new LinearRegression()
-            .setMaxIter(10)
-            .setRegParam(0.3)
-            .setElasticNetParam(0.8)
-            .featuresCol("magnitudeValue")
         
-        val eventsDF = spark.read.schema(customSchemaBis).option("multiline", true).json("/opt/eonet_api.json")
-        eventsDF.printSchema()
+        val eventsDF = spark.read.schema(customSchemaBis).option("multiline", true).json("/opt/mortages_data_es.json")
+        val explodedEventsDF = eventsDF.select(col("COD"), col("Nombre"), col("T3_Unidad"), col("T3_Escala"), col("MetaData"), explode(col("Data")).as("Data"))
+        // Adding lagged values
+        // WARNING!! Don't use just collect_list, it is non-deterministic. Order is not guaranteed. Use Window
+        // Use a combination of columns that yields an unique ID for each row when partitioning without wanting to group 
+        val windowSpec = Window.partitionBy("COD", "Data").orderBy("Data.Fecha").rowsBetween(-10, -1)
+        val laggedEventsDF = explodedEventsDF.select(col("*"), collect_list("Data.Valor").over(windowSpec).as("laggedValues"))
+        laggedEventsDF.show(100)
 
-        val explodedEventsDF = eventsDF.select(col("description"), col("link"), col("title"), explode(col("events")).as("event"))
-        val explodedDataDF = explodedEventsDF.select(col("event"), explode(col("event.geometry")).as("geometry"))
-            .select(col("event.id").as("event"), col("event.categories").as("category"), col("geometry.date"), col("geometry.magnitudeValue"))
-            .na.drop(Seq("magnitudeValue"))
-        // You can lag values using the window operator
-        val sortedDataDF = explodedDataDF.select(col("event"), col("category.id"), col("date"), col("magnitudeValue"), lag("magnitudeValue", 1).over(windowSpec)).show(100)
+        // val linerReg = new LinearRegression()
+        //     .setMaxIter(10)
+        //     .setRegParam(0.3)
+        //     .setElasticNetParam(0.8)
+        //     .featuresCol("magnitudeValue")
+        //     .labelCol("")
 
     }
 }
