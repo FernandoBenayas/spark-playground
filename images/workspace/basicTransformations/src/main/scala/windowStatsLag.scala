@@ -14,7 +14,7 @@ import org.joda.time.DateTime
 
 import org.json4s.DefaultFormats
 
-object BasicMllib {
+object WindowStatsLag {
 
     def main(args: Array[String]) {
 
@@ -68,13 +68,6 @@ object BasicMllib {
         val windowSpec = Window.partitionBy("COD", "Data").orderBy("Data.Fecha").rowsBetween(-10, -1)
         val laggedEventsDF = explodedEventsDF.select(col("*"), collect_list("Data.Valor").over(windowSpec).as("laggedValues"))
         laggedEventsDF.show(100)
-
-        // val linerReg = new LinearRegression()
-        //     .setMaxIter(10)
-        //     .setRegParam(0.3)
-        //     .setElasticNetParam(0.8)
-        //     .featuresCol("magnitudeValue")
-        //     .labelCol("")
 
     }
 }

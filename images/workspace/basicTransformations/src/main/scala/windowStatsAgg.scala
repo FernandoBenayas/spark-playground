@@ -13,7 +13,7 @@ import org.joda.time.DateTime
 
 import org.json4s.DefaultFormats
 
-object WindowStats {
+object WindowStatsAgg {
 
     def main(args: Array[String]) {
 

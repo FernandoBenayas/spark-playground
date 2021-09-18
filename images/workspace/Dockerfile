@@ -17,7 +17,8 @@ EXPOSE 6006
 # Copying app files
 COPY schemaJSON /home/projects/schemaJSON
 COPY basicTransformations /home/projects/basicTransformations
-COPY mllib /home/projects/mllib
+COPY ml /home/projects/ml
+COPY streaming /home/projects/streaming
 
 # Container ENVs are configured in Compose file
 

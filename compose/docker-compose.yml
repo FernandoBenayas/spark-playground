@@ -31,6 +31,7 @@ services:
             - ../tmp/eonet_api.json:/opt/eonet_api.json
             - ../tmp/ipv_api.json:/opt/ipv_api.json
             - ../tmp/mortages_data_es.json:/opt/mortages_data_es.json
+            - ../tmp/AMZN.csv:/opt/AMZN.csv
     spark-worker-1:
         image: fernandobenayas/spark-worker:1.0
         container_name: spark-worker-1
@@ -48,6 +49,7 @@ services:
             - ../tmp/eonet_api.json:/opt/eonet_api.json
             - ../tmp/ipv_api.json:/opt/ipv_api.json
             - ../tmp/mortages_data_es.json:/opt/mortages_data_es.json
+            - ../tmp/AMZN.csv:/opt/AMZN.csv
     spark-worker-2:
         image: fernandobenayas/spark-worker:1.0
         container_name: spark-worker-2
@@ -65,5 +67,6 @@ services:
             - ../tmp/eonet_api.json:/opt/eonet_api.json
             - ../tmp/ipv_api.json:/opt/ipv_api.json
             - ../tmp/mortages_data_es.json:/opt/mortages_data_es.json
+            - ../tmp/AMZN.csv:/opt/AMZN.csv
 networks:
     sparknet:
