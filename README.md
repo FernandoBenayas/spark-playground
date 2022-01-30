@@ -10,5 +10,5 @@ Docker-based Spark Playground for distribution-agnostic people
 
 Example:
 ```console
-spark-submit --class fbds.example.json.AutoSchemaJSON --master spark://spark-master:7077 read-json-using-defined-schema_2.12-1.0.jar
+spark-submit --conf spark.driver.memory=1g --conf spark.driver.cores=1 --conf spark.executor.memory=2g --conf spark.executor.cores=2 --conf spark.executor.instances=2 --class fbds.example.json.structuredStreamingHTTP --master spark://spark-master:7077 target/scala-2.12/use-spark-streaming_2.12-1.0.jar
 ```

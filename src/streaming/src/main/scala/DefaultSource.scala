@@ -7,6 +7,7 @@ import org.apache.spark.sql.execution.streaming.{Source, LongOffset, SerializedO
 import org.apache.spark.sql.sources.{StreamSourceProvider, DataSourceRegister}
 import org.apache.spark.unsafe.types.UTF8String
 import org.apache.spark.sql.catalyst.plans.logical.{Range, RepartitionByExpression}
+import org.apache.spark.sql.catalyst.expressions.{GenericRowWithSchema}
 
 import java.io.{BufferedReader, InputStreamReader}
 import java.nio.charset.StandardCharsets
@@ -19,6 +20,16 @@ import org.json4s.jackson.JsonMethods.parse
 import org.json4s.DefaultFormats
 import org.joda.time.DateTime
 
+// class Datapoint(val timestamp: String, val value: Integer) {
+//     // alias for the type to convert to and from
+//     type DatapointEncoded = (String, Integer)
+
+//     // implicit conversions
+//     implicit def toEncoded(o: Datapoint): DatapointEncoded = (o.timestamp, o.value)
+//     implicit def fromEncoded(e: DatapointEncoded): Datapoint = new Datapoint(e._1, e._2)
+// }
+
+case class Datapoint(val timestamp: String, val value: Integer)
 
 class DefaultSource extends StreamSourceProvider with DataSourceRegister {
     override def shortName(): String = "CustomSource"
@@ -38,6 +49,7 @@ class CustomSource private (sqlContext: SQLContext) extends Source {
     private var currentOffset: LongOffset = LongOffset(0)
     private var dataThread: Thread = dataGenerationThread()
     private var batches = collection.mutable.ListBuffer.empty[(String, Long)]
+    
 
     override def getOffset: Option[Offset] = {
         if (currentOffset.offset <= 0) None else Some(currentOffset)
@@ -57,14 +69,22 @@ class CustomSource private (sqlContext: SQLContext) extends Source {
         val e = getOffsetValue(end)
         //val e = LongOffset.convert(end).offset
 
-        val ds = new Dataset[java.lang.Long](
-            sqlContext.sparkSession,
-            Range(s, e, 1, Some(sqlContext.sparkSession.sparkContext.defaultParallelism),
-            isStreaming=true),
-            Encoders.LONG
-        )
+        var plan = Range(
+                s,
+                e,
+                1,
+                Some(sqlContext.sparkSession.sparkContext.defaultParallelism),
+                isStreaming = true)
 
-        ds.toDF("a")
+
+        val datapointEncoder = Encoders.product[Datapoint]
+        datapointEncoder.schema.printTreeString()
+        val ds = new Dataset[Datapoint](
+            sqlContext.sparkSession,
+            plan,
+            datapointEncoder)
+        ds.printSchema()
+        ds.toDF("ts", "value")
 
         // I'm parallelizing the collection, performing the operation and de-parallelizing again
         // ALWAYS REMEMBER this regarding parallel collections
@@ -79,10 +99,10 @@ class CustomSource private (sqlContext: SQLContext) extends Source {
         // val rdd = sqlContext
         //     .sparkContext
         //     .parallelize(data)
-        //     .map { case (v, idx) => Row(UTF8String.fromString(v))}
+        //     .map { case (v, idx) => InternalRow(UTF8String.fromString(v), idx.toLong)}
         
-        //sqlContext.internalCreateDataFrame(rdd, schema, isStreaming = true)
-        //sqlContext.sparkSession.createDataFrame(rdd, schema)
+        // sqlContext.sparkSession.internalCreateDataFrame(rdd, schema, isStreaming = true)
+        // sqlContext.sparkSession.createDataFrame(rdd, schema)
 
     }
 
@@ -104,11 +124,12 @@ class CustomSource private (sqlContext: SQLContext) extends Source {
             override def run() {
                 while (true) {
                     val httpClient = new DefaultHttpClient()
-                    val request = new HttpGet("http://www.randomnumberapi.com/api/v1.0/random")
+                    val request = new HttpGet("http://dataserver:9090")
+                    //val request = new HttpGet("http://www.randomnumberapi.com/api/v1.0/random")
                     request.addHeader("accept", "application/json")
                     val response = httpClient.execute(request)
                     if (response.getStatusLine().getStatusCode() != 200) {
-                        throw new RuntimeException("Failed : HTTP error code : "+ response.getStatusLine().getStatusCode())
+                        throw new RuntimeException("Failed : HTTP error code : " + response.getStatusLine().getStatusCode())
                     }
                     val reader = new BufferedReader(new InputStreamReader(response.getEntity().getContent(), StandardCharsets.UTF_8))
                     val line = reader.readLine
@@ -133,5 +154,11 @@ class CustomSource private (sqlContext: SQLContext) extends Source {
 // "Use a companion object for methods and values which are not specific to instances of the companion class"
 object CustomSource {
     def apply(sqlContext: SQLContext): Source = new CustomSource(sqlContext)
-    lazy val schema = StructType(List(StructField("entry", StringType, false)))
+    lazy val schema = StructType(
+        List(
+            StructField("timestamp", StringType, false),
+            StructField("value", StringType, false)
+        )
+    )
+    // lazy val schema = StructType(List(StructField("entry", StringType, false)))
 }

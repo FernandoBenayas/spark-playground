@@ -30,7 +30,14 @@ object structuredStreamingHTTP {
             .config("spark.submit.deployMode", "cluster")
             .getOrCreate
         
-        val s = StructType(List(StructField("entry", StringType, false)))
+        val s = StructType(
+            List(
+                StructField("timestamp", StringType, false),
+                StructField("value", StringType, false)
+            )
+        )
+
+        // val s = StructType(List(StructField("entry", StringType, false)))
 
         val r = sparkSession
             .readStream

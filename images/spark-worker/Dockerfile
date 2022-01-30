@@ -11,7 +11,7 @@ RUN apt-get install init -y
 # Installing Spark
 RUN wget https://ftp.cixug.es/apache/spark/spark-3.1.2/spark-3.1.2-bin-hadoop3.2.tgz -P /opt
 WORKDIR /opt
-RUN tar -xzvf spark-3.1.2-bin-hadoop3.2.tgz
+RUN tar -xzvf /opt/spark-3.1.2-bin-hadoop3.2.tgz
 RUN mv spark-3.1.2-bin-hadoop3.2 spark
 ENV PATH "/opt/spark:/opt/spark/bin:/opt/spark/sbin:${PATH}"
 
