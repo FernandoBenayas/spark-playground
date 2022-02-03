@@ -1,4 +1,4 @@
-package fbds.example.json
+package org.apache.spark.sql
 
 import org.apache.spark.sql.{DataFrame, SQLContext, SparkSession, Dataset, Encoders}
 import org.apache.spark.sql.streaming.{OutputMode}
@@ -41,7 +41,7 @@ object structuredStreamingHTTP {
 
         val r = sparkSession
             .readStream
-            .format("fbds.example.json.DefaultSource")
+            .format("org.apache.spark.sql.DefaultSource")
             .schema(s)
             .load()
         

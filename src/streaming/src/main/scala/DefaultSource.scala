@@ -1,4 +1,5 @@
-package fbds.example.json
+// Using org.apache.spark.sql so I can accesss internal methods
+package org.apache.spark.sql
 
 import org.apache.spark.sql.catalyst.InternalRow
 import org.apache.spark.sql._
@@ -65,9 +66,7 @@ class CustomSource private (sqlContext: SQLContext) extends Source {
 
     override def getBatch(start: Option[Offset], end: Offset): DataFrame = {
         val s = start.map(getOffsetValue) getOrElse LongOffset(0).offset
-        //LongOffset.convert(start).offset getOrElse LongOffset(0).offset
         val e = getOffsetValue(end)
-        //val e = LongOffset.convert(end).offset
 
         var plan = Range(
                 s,
@@ -76,34 +75,22 @@ class CustomSource private (sqlContext: SQLContext) extends Source {
                 Some(sqlContext.sparkSession.sparkContext.defaultParallelism),
                 isStreaming = true)
 
-
-        val datapointEncoder = Encoders.product[Datapoint]
-        datapointEncoder.schema.printTreeString()
-        val ds = new Dataset[Datapoint](
-            sqlContext.sparkSession,
-            plan,
-            datapointEncoder)
-        ds.printSchema()
-        ds.toDF("ts", "value")
-
         // I'm parallelizing the collection, performing the operation and de-parallelizing again
         // ALWAYS REMEMBER this regarding parallel collections
         // 1. Side-effecting operations can lead to non-determinism
         //  1a. Even if the operation is associative and commutative, a Data Race can result in using as basis old values
         // 2. Non-associative operations lead to non-determinism
-        // val data = batches
-        //     .par
-        //     .filter { case (_, idx) => idx >= s && idx <= e }
-        //     .seq
+        val data = batches
+            .par
+            .filter { case (_, idx) => idx >= s && idx <= e }
+            .seq
         
-        // val rdd = sqlContext
-        //     .sparkContext
-        //     .parallelize(data)
-        //     .map { case (v, idx) => InternalRow(UTF8String.fromString(v), idx.toLong)}
+        val rdd = sqlContext
+            .sparkContext
+            .parallelize(data)
+            .map { case (v, idx) => InternalRow(UTF8String.fromString(v), idx.toLong)}
         
-        // sqlContext.sparkSession.internalCreateDataFrame(rdd, schema, isStreaming = true)
-        // sqlContext.sparkSession.createDataFrame(rdd, schema)
-
+        sqlContext.sparkSession.internalCreateDataFrame(rdd, schema, isStreaming = true)
     }
 
     // "commit" implements how Spark controls that data with offsets less or equal to
