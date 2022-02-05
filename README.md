@@ -3,7 +3,7 @@ Docker-based Spark Playground for distribution-agnostic people
 
 ## How-to 
 
-1. Write your own Scala program (or use any of the ones provided inside the **workspace** image)
+1. Write your own Scala program (or use any of the ones provided inside the **spark-master** image)
 2. Compile the program
 3. Package the program
 4. Send it to the Spark cluster
