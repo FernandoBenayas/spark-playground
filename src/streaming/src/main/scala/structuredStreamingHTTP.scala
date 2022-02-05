@@ -32,12 +32,11 @@ object structuredStreamingHTTP {
         
         val s = StructType(
             List(
-                StructField("timestamp", StringType, false),
-                StructField("value", StringType, false)
+                StructField("timestamp", TimestampType, false),
+                StructField("value", LongType, false),
+                StructField("index", LongType, false)
             )
         )
-
-        // val s = StructType(List(StructField("entry", StringType, false)))
 
         val r = sparkSession
             .readStream
@@ -48,10 +47,10 @@ object structuredStreamingHTTP {
         r.createTempView("w")
 
         sparkSession
-            .sql("select count(*) as c from w")
+            .sql("select * from w")
             .writeStream
             .format("console")
-            .outputMode(OutputMode.Complete())
+            .outputMode(OutputMode.Append())
             .start()
             .awaitTermination()
 

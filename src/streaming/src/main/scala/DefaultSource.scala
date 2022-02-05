@@ -3,7 +3,7 @@ package org.apache.spark.sql
 
 import org.apache.spark.sql.catalyst.InternalRow
 import org.apache.spark.sql._
-import org.apache.spark.sql.types.{LongType, StringType, StructField, StructType}
+import org.apache.spark.sql.types.{LongType, StringType, StructField, StructType, TimestampType}
 import org.apache.spark.sql.execution.streaming.{Source, LongOffset, SerializedOffset, Offset}
 import org.apache.spark.sql.sources.{StreamSourceProvider, DataSourceRegister}
 import org.apache.spark.unsafe.types.UTF8String
@@ -11,6 +11,9 @@ import org.apache.spark.sql.catalyst.plans.logical.{Range, RepartitionByExpressi
 import org.apache.spark.sql.catalyst.expressions.{GenericRowWithSchema}
 
 import java.io.{BufferedReader, InputStreamReader}
+import java.sql.Timestamp
+import java.util.Date
+import java.text.SimpleDateFormat
 import java.nio.charset.StandardCharsets
 import org.apache.http.HttpResponse
 import org.apache.http.client.ClientProtocolException
@@ -20,15 +23,8 @@ import scala.io.Source._
 import org.json4s.jackson.JsonMethods.parse
 import org.json4s.DefaultFormats
 import org.joda.time.DateTime
+import scala.util.parsing.json._
 
-// class Datapoint(val timestamp: String, val value: Integer) {
-//     // alias for the type to convert to and from
-//     type DatapointEncoded = (String, Integer)
-
-//     // implicit conversions
-//     implicit def toEncoded(o: Datapoint): DatapointEncoded = (o.timestamp, o.value)
-//     implicit def fromEncoded(e: DatapointEncoded): Datapoint = new Datapoint(e._1, e._2)
-// }
 
 case class Datapoint(val timestamp: String, val value: Integer)
 
@@ -49,7 +45,7 @@ class CustomSource private (sqlContext: SQLContext) extends Source {
     override def schema: StructType = CustomSource.schema
     private var currentOffset: LongOffset = LongOffset(0)
     private var dataThread: Thread = dataGenerationThread()
-    private var batches = collection.mutable.ListBuffer.empty[(String, Long)]
+    private var batches = collection.mutable.ListBuffer.empty[(String, Long, Long)]
     
 
     override def getOffset: Option[Offset] = {
@@ -67,6 +63,7 @@ class CustomSource private (sqlContext: SQLContext) extends Source {
     override def getBatch(start: Option[Offset], end: Offset): DataFrame = {
         val s = start.map(getOffsetValue) getOrElse LongOffset(0).offset
         val e = getOffsetValue(end)
+        val dateFormat = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss")
 
         var plan = Range(
                 s,
@@ -82,13 +79,13 @@ class CustomSource private (sqlContext: SQLContext) extends Source {
         // 2. Non-associative operations lead to non-determinism
         val data = batches
             .par
-            .filter { case (_, idx) => idx >= s && idx <= e }
+            .filter { case (_, _, idx) => idx >= s && idx <= e }
             .seq
         
         val rdd = sqlContext
             .sparkContext
             .parallelize(data)
-            .map { case (v, idx) => InternalRow(UTF8String.fromString(v), idx.toLong)}
+            .map { case (a, b, idx) => InternalRow(new Timestamp(dateFormat.parse(a).getTime()).getTime()*1000, b.toLong, idx.toLong)}
         
         sqlContext.sparkSession.internalCreateDataFrame(rdd, schema, isStreaming = true)
     }
@@ -99,7 +96,7 @@ class CustomSource private (sqlContext: SQLContext) extends Source {
     override def commit(end: Offset): Unit = {
         val commitedOffset = getOffsetValue(end)
         val toKeep = batches
-            .filter { case (_, idx) => idx >= commitedOffset }
+            .filter { case (_, _, idx) => idx >= commitedOffset }
         batches = toKeep
     }
 
@@ -112,7 +109,6 @@ class CustomSource private (sqlContext: SQLContext) extends Source {
                 while (true) {
                     val httpClient = new DefaultHttpClient()
                     val request = new HttpGet("http://dataserver:9090")
-                    //val request = new HttpGet("http://www.randomnumberapi.com/api/v1.0/random")
                     request.addHeader("accept", "application/json")
                     val response = httpClient.execute(request)
                     if (response.getStatusLine().getStatusCode() != 200) {
@@ -120,13 +116,21 @@ class CustomSource private (sqlContext: SQLContext) extends Source {
                     }
                     val reader = new BufferedReader(new InputStreamReader(response.getEntity().getContent(), StandardCharsets.UTF_8))
                     val line = reader.readLine
-                    reader.close
-                    httpClient.getConnectionManager().shutdown()
+                    var optionJSON = JSON.parseFull(line)
 
                     this.synchronized {
-                        currentOffset += 1
-                        batches.append((line, currentOffset.offset))
+                        optionJSON match {
+                            case Some(l: List[Map[String, Double]]) =>
+                                l.foreach { item => 
+                                    currentOffset += 1
+                                    batches.append((item.head._1, item.head._2.toLong, currentOffset.offset))
+                                }
+                            case None => 
+                        }
                     }
+
+                    reader.close
+                    httpClient.getConnectionManager().shutdown()
 
                     Thread.sleep(200)
                 }
@@ -143,9 +147,9 @@ object CustomSource {
     def apply(sqlContext: SQLContext): Source = new CustomSource(sqlContext)
     lazy val schema = StructType(
         List(
-            StructField("timestamp", StringType, false),
-            StructField("value", StringType, false)
+            StructField("timestamp", TimestampType, false),
+            StructField("value", LongType, false),
+            StructField("index", LongType, false)
         )
     )
-    // lazy val schema = StructType(List(StructField("entry", StringType, false)))
 }
