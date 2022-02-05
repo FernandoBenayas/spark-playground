@@ -1,0 +1,1464 @@
+{
+  "format": "linked-data-api",
+  "version": "0.2",
+  "result": {
+    "_about": "http://datos.gob.es/apidata/catalog/dataset/title/ipv.json?_pageSize=10&_page=0&_sort=title",
+    "definition": "http://datos.gob.es/apidata/catalog/meta/dataset/title/_varTitle.json?_sort=title",
+    "extendedMetadataVersion": "http://datos.gob.es/apidata/catalog/dataset/title/ipv.json?_pageSize=10&_page=0&_metadata=all&_sort=title",
+    "first": "http://datos.gob.es/apidata/catalog/dataset/title/ipv.json?_page=0&_sort=title",
+    "isPartOf": {
+      "_about": "http://datos.gob.es/apidata/catalog/dataset/title/ipv.json?_sort=title",
+      "definition": "http://datos.gob.es/apidata/catalog/meta/dataset/title/_varTitle.json?_sort=title",
+      "hasPart": "http://datos.gob.es/apidata/catalog/dataset/title/ipv.json?_pageSize=10&_page=0&_sort=title",
+      "type": "http://purl.org/linked-data/api/vocab#ListEndpoint"
+    },
+    "items": [
+      {
+        "_about": "http://datos.gob.es/catalogo/ea0010587-indice-de-precios-de-la-vivienda-ipv7",
+        "description": [
+          {
+            "_value": "Obtener información sobre la evolución de los precios de las viviendas compradasVariables de estudio: Precios de transacción de las viviendasLa url de acceso se dirige al menú de la operación desde donde se pueden visualizar como html y descargar las diferentes tablas que componen la publicación. La descarga se puede realizar en formato pc-axis, excel y CSV",
+            "_lang": "es"
+          },
+          {
+            "_value": "Obtener información sobre la evolución de los precios de las viviendas compradasVariables de estudio: Precios de transacción de las viviendasLa url de acceso se dirige al menú de la operación desde donde se pueden visualizar como html y descargar las diferentes tablas que componen la publicación. La descarga se puede realizar en formato pc-axis, excel y CSV",
+            "_lang": "en"
+          }
+        ],
+        "distribution": {
+          "_about": "http://datos.gob.es/catalogo/ea0010587-indice-de-precios-de-la-vivienda-ipv7/resource/2c4b1ca6-466c-4e6d-909b-33732c990360",
+          "accessURL": "https://www.ine.es/dyngs/INEbase/es/operacion.htm?c=Estadistica_C&cid=1254736152838&menu=resultados&idp=1254735576757",
+          "format": [
+            {
+              "_about": "http://datos.gob.es/catalogo/ea0010587-indice-de-precios-de-la-vivienda-ipv7/resource/2c4b1ca6-466c-4e6d-909b-33732c990360/format",
+              "type": "http://purl.org/dc/terms/IMT",
+              "value": "text/html"
+            },
+            "http://publications.europa.eu/resource/authority/file-type/HTML"
+          ],
+          "type": "http://www.w3.org/ns/dcat#Distribution"
+        },
+        "issued": "dom, 23 oct 2011 22:00:00 GMT+0000",
+        "keyword": [
+          "Construcción y vivienda",
+          "Construction and housing",
+          "Estadísticas",
+          "Precios",
+          "Precios de las distintas actividades sectoriales",
+          "Prices",
+          "Prices of the different sectoral activities",
+          "Statistics"
+        ],
+        "modified": "vie, 21 feb 2020 13:16:30 GMT+0000",
+        "publisher": "http://datos.gob.es/recurso/sector-publico/org/Organismo/EA0010587",
+        "spatial": "http://datos.gob.es/recurso/sector-publico/territorio/Pais/España",
+        "theme": [
+          "http://datos.gob.es/kos/sector-publico/sector/economia",
+          "http://datos.gob.es/kos/sector-publico/sector/vivienda"
+        ],
+        "title": [
+          "Índice de Precios de la Vivienda (IPV)",
+          "Índice de Precios de la Vivienda (IPV)"
+        ],
+        "type": "http://www.w3.org/ns/dcat#Dataset"
+      },
+      {
+        "_about": "http://datos.gob.es/catalogo/ea0010587-indices-por-ccaa-general-vivienda-nueva-y-de-segunda-mano-anual-comunidades-autonomas-indice-de-precios-de-la-vivienda-ipv-identificador-api-21861",
+        "description": [
+          {
+            "_value": "Tabla de INEbase\nÍndices por CCAA  general  vivienda nueva y de segunda mano. Anual. Comunidades autónomas.  Índice de Precios de la Vivienda  IPV",
+            "_lang": "es"
+          },
+          {
+            "_value": "Table of INEBase\nAutonomous Communities index  general  new dwelling and second-hand dwelling. Annual. Comunidades autónomas.  Housing Price Index  HPI",
+            "_lang": "en"
+          }
+        ],
+        "distribution": [
+          {
+            "_about": "http://datos.gob.es/catalogo/ea0010587-indices-por-ccaa-general-vivienda-nueva-y-de-segunda-mano-anual-comunidades-autonomas-indice-de-precios-de-la-vivienda-ipv-identificador-api-21861/resource/0775060d-af14-49bb-b115-bc0102bab7aa",
+            "accessURL": "http://www.ine.es/jaxiT3/files/t/es/csv_c/2186.csv_c",
+            "format": [
+              {
+                "_about": "http://datos.gob.es/catalogo/ea0010587-indices-por-ccaa-general-vivienda-nueva-y-de-segunda-mano-anual-comunidades-autonomas-indice-de-precios-de-la-vivienda-ipv-identificador-api-21861/resource/0775060d-af14-49bb-b115-bc0102bab7aa/format",
+                "type": "http://purl.org/dc/terms/IMT",
+                "value": "text/csv"
+              },
+              "http://publications.europa.eu/resource/authority/file-type/CSV"
+            ],
+            "title": [
+              "CSV separado por ,",
+              "CSV separated by comma"
+            ],
+            "type": "http://www.w3.org/ns/dcat#Distribution"
+          },
+          {
+            "_about": "http://datos.gob.es/catalogo/ea0010587-indices-por-ccaa-general-vivienda-nueva-y-de-segunda-mano-anual-comunidades-autonomas-indice-de-precios-de-la-vivienda-ipv-identificador-api-21861/resource/103bb8af-ccff-4cf8-b924-efee6357c8f4",
+            "accessURL": "http://www.ine.es/jaxiT3/files/t/es/csv_sc/2186.csv_sc",
+            "format": [
+              {
+                "_about": "http://datos.gob.es/catalogo/ea0010587-indices-por-ccaa-general-vivienda-nueva-y-de-segunda-mano-anual-comunidades-autonomas-indice-de-precios-de-la-vivienda-ipv-identificador-api-21861/resource/103bb8af-ccff-4cf8-b924-efee6357c8f4/format",
+                "type": "http://purl.org/dc/terms/IMT",
+                "value": "text/csv"
+              },
+              "http://publications.europa.eu/resource/authority/file-type/CSV"
+            ],
+            "title": [
+              "CSV separado por ;",
+              "CSV separated by semicolons"
+            ],
+            "type": "http://www.w3.org/ns/dcat#Distribution"
+          },
+          {
+            "_about": "http://datos.gob.es/catalogo/ea0010587-indices-por-ccaa-general-vivienda-nueva-y-de-segunda-mano-anual-comunidades-autonomas-indice-de-precios-de-la-vivienda-ipv-identificador-api-21861/resource/2a753bf9-2cbc-49d2-aeaf-be9fab343201",
+            "accessURL": "http://servicios.ine.es/wstempus/js/es/DATOS_TABLA/2186?tip=AM",
+            "format": [
+              {
+                "_about": "http://datos.gob.es/catalogo/ea0010587-indices-por-ccaa-general-vivienda-nueva-y-de-segunda-mano-anual-comunidades-autonomas-indice-de-precios-de-la-vivienda-ipv-identificador-api-21861/resource/2a753bf9-2cbc-49d2-aeaf-be9fab343201/format",
+                "type": "http://purl.org/dc/terms/IMT",
+                "value": "application/json"
+              },
+              "http://publications.europa.eu/resource/authority/file-type/JSON"
+            ],
+            "title": [
+              "Json",
+              "Json"
+            ],
+            "type": "http://www.w3.org/ns/dcat#Distribution"
+          },
+          {
+            "_about": "http://datos.gob.es/catalogo/ea0010587-indices-por-ccaa-general-vivienda-nueva-y-de-segunda-mano-anual-comunidades-autonomas-indice-de-precios-de-la-vivienda-ipv-identificador-api-21861/resource/47ed6d0d-d665-42b9-8f93-c66417447b40",
+            "accessURL": "http://www.ine.es/jaxiT3/files/t/es/xls/2186.xls",
+            "format": [
+              {
+                "_about": "http://datos.gob.es/catalogo/ea0010587-indices-por-ccaa-general-vivienda-nueva-y-de-segunda-mano-anual-comunidades-autonomas-indice-de-precios-de-la-vivienda-ipv-identificador-api-21861/resource/47ed6d0d-d665-42b9-8f93-c66417447b40/format",
+                "type": "http://purl.org/dc/terms/IMT",
+                "value": "application/vnd.ms-excel"
+              },
+              "http://publications.europa.eu/resource/authority/file-type/XLS"
+            ],
+            "title": [
+              "Excel: Extensión XLS",
+              "Excel: XLS extension"
+            ],
+            "type": "http://www.w3.org/ns/dcat#Distribution"
+          },
+          {
+            "_about": "http://datos.gob.es/catalogo/ea0010587-indices-por-ccaa-general-vivienda-nueva-y-de-segunda-mano-anual-comunidades-autonomas-indice-de-precios-de-la-vivienda-ipv-identificador-api-21861/resource/6d00ef98-da37-413f-ac53-72c1a1ae41fc",
+            "accessURL": "http://www.ine.es/jaxiT3/files/t/es/csv/2186.csv",
+            "format": [
+              {
+                "_about": "http://datos.gob.es/catalogo/ea0010587-indices-por-ccaa-general-vivienda-nueva-y-de-segunda-mano-anual-comunidades-autonomas-indice-de-precios-de-la-vivienda-ipv-identificador-api-21861/resource/6d00ef98-da37-413f-ac53-72c1a1ae41fc/format",
+                "type": "http://purl.org/dc/terms/IMT",
+                "value": "text/csv"
+              },
+              "http://publications.europa.eu/resource/authority/file-type/CSV"
+            ],
+            "title": [
+              "CSV separado por tabuladores",
+              "CSV separated by tab"
+            ],
+            "type": "http://www.w3.org/ns/dcat#Distribution"
+          },
+          {
+            "_about": "http://datos.gob.es/catalogo/ea0010587-indices-por-ccaa-general-vivienda-nueva-y-de-segunda-mano-anual-comunidades-autonomas-indice-de-precios-de-la-vivienda-ipv-identificador-api-21861/resource/d05c3bd9-426d-49fc-9c82-980879918866",
+            "accessURL": "http://www.ine.es/jaxiT3/files/t/es/xlsx/2186.xlsx",
+            "format": [
+              {
+                "_about": "http://datos.gob.es/catalogo/ea0010587-indices-por-ccaa-general-vivienda-nueva-y-de-segunda-mano-anual-comunidades-autonomas-indice-de-precios-de-la-vivienda-ipv-identificador-api-21861/resource/d05c3bd9-426d-49fc-9c82-980879918866/format",
+                "type": "http://purl.org/dc/terms/IMT",
+                "value": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+              },
+              "http://publications.europa.eu/resource/authority/file-type/XLSX"
+            ],
+            "title": [
+              "Excel: Extension XLSx",
+              "Excel: XLSx extension"
+            ],
+            "type": "http://www.w3.org/ns/dcat#Distribution"
+          },
+          {
+            "_about": "http://datos.gob.es/catalogo/ea0010587-indices-por-ccaa-general-vivienda-nueva-y-de-segunda-mano-anual-comunidades-autonomas-indice-de-precios-de-la-vivienda-ipv-identificador-api-21861/resource/efa7a9d3-77a6-4ebc-9183-9289723093df",
+            "accessURL": "http://www.ine.es/jaxiT3/Tabla.htm?t=2186",
+            "format": [
+              {
+                "_about": "http://datos.gob.es/catalogo/ea0010587-indices-por-ccaa-general-vivienda-nueva-y-de-segunda-mano-anual-comunidades-autonomas-indice-de-precios-de-la-vivienda-ipv-identificador-api-21861/resource/efa7a9d3-77a6-4ebc-9183-9289723093df/format",
+                "type": "http://purl.org/dc/terms/IMT",
+                "value": "text/html"
+              },
+              "http://publications.europa.eu/resource/authority/file-type/HTML"
+            ],
+            "title": [
+              "Html",
+              "Html"
+            ],
+            "type": "http://www.w3.org/ns/dcat#Distribution"
+          },
+          {
+            "_about": "http://datos.gob.es/catalogo/ea0010587-indices-por-ccaa-general-vivienda-nueva-y-de-segunda-mano-anual-comunidades-autonomas-indice-de-precios-de-la-vivienda-ipv-identificador-api-21861/resource/f7110158-a306-459d-8b7d-4a9465b34fc6",
+            "accessURL": "http://www.ine.es/jaxiT3/files/t/es/px/2186.px",
+            "format": [
+              {
+                "_about": "http://datos.gob.es/catalogo/ea0010587-indices-por-ccaa-general-vivienda-nueva-y-de-segunda-mano-anual-comunidades-autonomas-indice-de-precios-de-la-vivienda-ipv-identificador-api-21861/resource/f7110158-a306-459d-8b7d-4a9465b34fc6/format",
+                "type": "http://purl.org/dc/terms/IMT",
+                "value": "text/pc-axis"
+              },
+              "http://publications.europa.eu/resource/authority/file-type/PC-Axis"
+            ],
+            "title": [
+              "Pc-Axis",
+              "Pc-Axis"
+            ],
+            "type": "http://www.w3.org/ns/dcat#Distribution"
+          }
+        ],
+        "identifier": "urn:ine%3Aes%3ATABLA%3AT3%3A49%3A2186",
+        "keyword": [
+          "Andalucía",
+          "Annual average index",
+          "Annual variation",
+          "Aragón",
+          "Asturias  Principado de",
+          "Autonomous Communities and Cities",
+          "Balears  Illes",
+          "Base",
+          "Base 2007",
+          "Canarias",
+          "Cantabria",
+          "Castilla - La Mancha",
+          "Castilla y León",
+          "Cataluña",
+          "Ceuta",
+          "Comunidades y Ciudades Autónomas",
+          "Comunitat Valenciana",
+          "Construcción y vivienda",
+          "Construction and housing",
+          "Estadísticas",
+          "Extremadura",
+          "Galicia",
+          "General",
+          "General  vivienda nueva y de segunda mano",
+          "IPV",
+          "Indices and rates",
+          "Madrid  Comunidad de",
+          "Media anual",
+          "Melilla",
+          "Murcia  Región de",
+          "National Total",
+          "Navarra  Comunidad Foral de",
+          "New dwelling",
+          "País Vasco",
+          "Precios",
+          "Precios de las distintas actividades sectoriales",
+          "Prices",
+          "Prices of the different sectoral activities",
+          "Rioja  La",
+          "Second-hand dwelling",
+          "Statistics",
+          "Total Nacional",
+          "Variación anual",
+          "Vivienda nueva",
+          "Vivienda segunda mano",
+          "Índices y tasas"
+        ],
+        "modified": "mié, 21 mar 2018 15:00:39 GMT+0000",
+        "publisher": "http://datos.gob.es/recurso/sector-publico/org/Organismo/EA0010587",
+        "spatial": [
+          "http://datos.gob.es/recurso/sector-publico/territorio/Autonomia/Andalucia",
+          "http://datos.gob.es/recurso/sector-publico/territorio/Autonomia/Aragon",
+          "http://datos.gob.es/recurso/sector-publico/territorio/Autonomia/Canarias",
+          "http://datos.gob.es/recurso/sector-publico/territorio/Autonomia/Cantabria",
+          "http://datos.gob.es/recurso/sector-publico/territorio/Autonomia/Castilla-La-Mancha",
+          "http://datos.gob.es/recurso/sector-publico/territorio/Autonomia/Castilla-Leon",
+          "http://datos.gob.es/recurso/sector-publico/territorio/Autonomia/Cataluna",
+          "http://datos.gob.es/recurso/sector-publico/territorio/Autonomia/Ceuta",
+          "http://datos.gob.es/recurso/sector-publico/territorio/Autonomia/Comunidad-Foral-Navarra",
+          "http://datos.gob.es/recurso/sector-publico/territorio/Autonomia/Comunidad-Madrid",
+          "http://datos.gob.es/recurso/sector-publico/territorio/Autonomia/Comunitat-Valenciana",
+          "http://datos.gob.es/recurso/sector-publico/territorio/Autonomia/Extremadura",
+          "http://datos.gob.es/recurso/sector-publico/territorio/Autonomia/Galicia",
+          "http://datos.gob.es/recurso/sector-publico/territorio/Autonomia/Illes-Balears",
+          "http://datos.gob.es/recurso/sector-publico/territorio/Autonomia/La-Rioja",
+          "http://datos.gob.es/recurso/sector-publico/territorio/Autonomia/Melilla",
+          "http://datos.gob.es/recurso/sector-publico/territorio/Autonomia/Pais-Vasco",
+          "http://datos.gob.es/recurso/sector-publico/territorio/Autonomia/Principado-Asturias",
+          "http://datos.gob.es/recurso/sector-publico/territorio/Autonomia/Region-Murcia"
+        ],
+        "theme": [
+          "http://datos.gob.es/kos/sector-publico/sector/economia",
+          "http://datos.gob.es/kos/sector-publico/sector/vivienda"
+        ],
+        "title": [
+          "Autonomous Communities index  general  new dwelling and second-hand dwelling. Annual. Comunidades autónomas.  Housing Price Index  HPI   (API identifier: 2186)",
+          "Índices por CCAA  general  vivienda nueva y de segunda mano. Anual. Comunidades autónomas.  Índice de Precios de la Vivienda  IPV   (Identificador API:  2186)"
+        ],
+        "type": "http://www.w3.org/ns/dcat#Dataset"
+      },
+      {
+        "_about": "http://datos.gob.es/catalogo/ea0010587-indices-por-ccaa-general-vivienda-nueva-y-de-segunda-mano-anual-comunidades-autonomas-indice-de-precios-de-la-vivienda-ipv-identificador-api-251731",
+        "description": [
+          {
+            "_value": "Tabla de INEbase\nÍndices por CCAA  general  vivienda nueva y de segunda mano. Anual. Comunidades autónomas.  Índice de Precios de la Vivienda  IPV",
+            "_lang": "es"
+          },
+          {
+            "_value": "Table of INEBase\nAutonomous Communities index  general  new dwelling and second-hand dwelling. Annual. Comunidades autónomas.  Housing Price Index  HPI",
+            "_lang": "en"
+          }
+        ],
+        "distribution": [
+          {
+            "_about": "http://datos.gob.es/catalogo/ea0010587-indices-por-ccaa-general-vivienda-nueva-y-de-segunda-mano-anual-comunidades-autonomas-indice-de-precios-de-la-vivienda-ipv-identificador-api-251731/resource/9375f2fa-9166-425d-a7d8-208692dd50b4",
+            "accessURL": "http://www.ine.es/jaxiT3/files/t/es/csv_sc/25173.csv_sc",
+            "format": [
+              {
+                "_about": "http://datos.gob.es/catalogo/ea0010587-indices-por-ccaa-general-vivienda-nueva-y-de-segunda-mano-anual-comunidades-autonomas-indice-de-precios-de-la-vivienda-ipv-identificador-api-251731/resource/9375f2fa-9166-425d-a7d8-208692dd50b4/format",
+                "type": "http://purl.org/dc/terms/IMT",
+                "value": "text/csv"
+              },
+              "http://publications.europa.eu/resource/authority/file-type/CSV"
+            ],
+            "title": [
+              "CSV separado por ;",
+              "CSV separated by semicolons"
+            ],
+            "type": "http://www.w3.org/ns/dcat#Distribution"
+          },
+          {
+            "_about": "http://datos.gob.es/catalogo/ea0010587-indices-por-ccaa-general-vivienda-nueva-y-de-segunda-mano-anual-comunidades-autonomas-indice-de-precios-de-la-vivienda-ipv-identificador-api-251731/resource/9718a73f-23f5-4117-86bc-7fdf75ce2201",
+            "accessURL": "http://www.ine.es/jaxiT3/files/t/es/csv/25173.csv",
+            "format": [
+              {
+                "_about": "http://datos.gob.es/catalogo/ea0010587-indices-por-ccaa-general-vivienda-nueva-y-de-segunda-mano-anual-comunidades-autonomas-indice-de-precios-de-la-vivienda-ipv-identificador-api-251731/resource/9718a73f-23f5-4117-86bc-7fdf75ce2201/format",
+                "type": "http://purl.org/dc/terms/IMT",
+                "value": "text/csv"
+              },
+              "http://publications.europa.eu/resource/authority/file-type/CSV"
+            ],
+            "title": [
+              "CSV separado por tabuladores",
+              "CSV separated by tab"
+            ],
+            "type": "http://www.w3.org/ns/dcat#Distribution"
+          },
+          {
+            "_about": "http://datos.gob.es/catalogo/ea0010587-indices-por-ccaa-general-vivienda-nueva-y-de-segunda-mano-anual-comunidades-autonomas-indice-de-precios-de-la-vivienda-ipv-identificador-api-251731/resource/a467f46c-8a39-49aa-a2f1-9a0abc4bdf44",
+            "accessURL": "http://www.ine.es/jaxiT3/files/t/es/xlsx/25173.xlsx",
+            "format": [
+              {
+                "_about": "http://datos.gob.es/catalogo/ea0010587-indices-por-ccaa-general-vivienda-nueva-y-de-segunda-mano-anual-comunidades-autonomas-indice-de-precios-de-la-vivienda-ipv-identificador-api-251731/resource/a467f46c-8a39-49aa-a2f1-9a0abc4bdf44/format",
+                "type": "http://purl.org/dc/terms/IMT",
+                "value": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+              },
+              "http://publications.europa.eu/resource/authority/file-type/XLSX"
+            ],
+            "title": [
+              "Excel: Extension XLSx",
+              "Excel: XLSx extension"
+            ],
+            "type": "http://www.w3.org/ns/dcat#Distribution"
+          },
+          {
+            "_about": "http://datos.gob.es/catalogo/ea0010587-indices-por-ccaa-general-vivienda-nueva-y-de-segunda-mano-anual-comunidades-autonomas-indice-de-precios-de-la-vivienda-ipv-identificador-api-251731/resource/aaec6d5f-1429-4073-ad5e-6babc8c7d6fc",
+            "accessURL": "http://www.ine.es/jaxiT3/Tabla.htm?t=25173",
+            "format": [
+              {
+                "_about": "http://datos.gob.es/catalogo/ea0010587-indices-por-ccaa-general-vivienda-nueva-y-de-segunda-mano-anual-comunidades-autonomas-indice-de-precios-de-la-vivienda-ipv-identificador-api-251731/resource/aaec6d5f-1429-4073-ad5e-6babc8c7d6fc/format",
+                "type": "http://purl.org/dc/terms/IMT",
+                "value": "text/html"
+              },
+              "http://publications.europa.eu/resource/authority/file-type/HTML"
+            ],
+            "title": [
+              "Html",
+              "Html"
+            ],
+            "type": "http://www.w3.org/ns/dcat#Distribution"
+          },
+          {
+            "_about": "http://datos.gob.es/catalogo/ea0010587-indices-por-ccaa-general-vivienda-nueva-y-de-segunda-mano-anual-comunidades-autonomas-indice-de-precios-de-la-vivienda-ipv-identificador-api-251731/resource/b60205c5-cad8-4b83-99e4-3049eafd0492",
+            "accessURL": "http://servicios.ine.es/wstempus/js/es/DATOS_TABLA/25173?tip=AM",
+            "format": [
+              {
+                "_about": "http://datos.gob.es/catalogo/ea0010587-indices-por-ccaa-general-vivienda-nueva-y-de-segunda-mano-anual-comunidades-autonomas-indice-de-precios-de-la-vivienda-ipv-identificador-api-251731/resource/b60205c5-cad8-4b83-99e4-3049eafd0492/format",
+                "type": "http://purl.org/dc/terms/IMT",
+                "value": "application/json"
+              },
+              "http://publications.europa.eu/resource/authority/file-type/JSON"
+            ],
+            "title": [
+              "Json",
+              "Json"
+            ],
+            "type": "http://www.w3.org/ns/dcat#Distribution"
+          },
+          {
+            "_about": "http://datos.gob.es/catalogo/ea0010587-indices-por-ccaa-general-vivienda-nueva-y-de-segunda-mano-anual-comunidades-autonomas-indice-de-precios-de-la-vivienda-ipv-identificador-api-251731/resource/c8ebd643-ecfd-4075-88cb-4c0d31e12879",
+            "accessURL": "http://www.ine.es/jaxiT3/files/t/es/px/25173.px",
+            "format": [
+              {
+                "_about": "http://datos.gob.es/catalogo/ea0010587-indices-por-ccaa-general-vivienda-nueva-y-de-segunda-mano-anual-comunidades-autonomas-indice-de-precios-de-la-vivienda-ipv-identificador-api-251731/resource/c8ebd643-ecfd-4075-88cb-4c0d31e12879/format",
+                "type": "http://purl.org/dc/terms/IMT",
+                "value": "text/pc-axis"
+              },
+              "http://publications.europa.eu/resource/authority/file-type/PC-Axis"
+            ],
+            "title": [
+              "Pc-Axis",
+              "Pc-Axis"
+            ],
+            "type": "http://www.w3.org/ns/dcat#Distribution"
+          },
+          {
+            "_about": "http://datos.gob.es/catalogo/ea0010587-indices-por-ccaa-general-vivienda-nueva-y-de-segunda-mano-anual-comunidades-autonomas-indice-de-precios-de-la-vivienda-ipv-identificador-api-251731/resource/d25bcf05-fd16-4757-9eb7-148452a772bc",
+            "accessURL": "http://www.ine.es/jaxiT3/files/t/es/xls/25173.xls",
+            "format": [
+              {
+                "_about": "http://datos.gob.es/catalogo/ea0010587-indices-por-ccaa-general-vivienda-nueva-y-de-segunda-mano-anual-comunidades-autonomas-indice-de-precios-de-la-vivienda-ipv-identificador-api-251731/resource/d25bcf05-fd16-4757-9eb7-148452a772bc/format",
+                "type": "http://purl.org/dc/terms/IMT",
+                "value": "application/vnd.ms-excel"
+              },
+              "http://publications.europa.eu/resource/authority/file-type/XLS"
+            ],
+            "title": [
+              "Excel: Extensión XLS",
+              "Excel: XLS extension"
+            ],
+            "type": "http://www.w3.org/ns/dcat#Distribution"
+          },
+          {
+            "_about": "http://datos.gob.es/catalogo/ea0010587-indices-por-ccaa-general-vivienda-nueva-y-de-segunda-mano-anual-comunidades-autonomas-indice-de-precios-de-la-vivienda-ipv-identificador-api-251731/resource/e9420eb6-21bb-46ef-9bf7-37fc49eafe54",
+            "accessURL": "http://www.ine.es/jaxiT3/files/t/es/csv_c/25173.csv_c",
+            "format": [
+              {
+                "_about": "http://datos.gob.es/catalogo/ea0010587-indices-por-ccaa-general-vivienda-nueva-y-de-segunda-mano-anual-comunidades-autonomas-indice-de-precios-de-la-vivienda-ipv-identificador-api-251731/resource/e9420eb6-21bb-46ef-9bf7-37fc49eafe54/format",
+                "type": "http://purl.org/dc/terms/IMT",
+                "value": "text/csv"
+              },
+              "http://publications.europa.eu/resource/authority/file-type/CSV"
+            ],
+            "title": [
+              "CSV separado por ,",
+              "CSV separated by comma"
+            ],
+            "type": "http://www.w3.org/ns/dcat#Distribution"
+          }
+        ],
+        "identifier": "urn:ine%3Aes%3ATABLA%3AT3%3A49%3A25173",
+        "keyword": [
+          "Andalucía",
+          "Annual average index",
+          "Annual variation  for monthly series",
+          "Aragón",
+          "Asturias  Principado de",
+          "Autonomous Communities and Cities",
+          "Balears  Illes",
+          "Canarias",
+          "Cantabria",
+          "Castilla - La Mancha",
+          "Castilla y León",
+          "Cataluña",
+          "Ceuta",
+          "Comunidades y Ciudades Autónomas",
+          "Comunitat Valenciana",
+          "Construcción y vivienda",
+          "Construction and housing",
+          "Estadísticas",
+          "Extremadura",
+          "Galicia",
+          "General",
+          "General  vivienda nueva y de segunda mano",
+          "IPV",
+          "Index type",
+          "Indices and rates",
+          "Madrid  Comunidad de",
+          "Media anual",
+          "Melilla",
+          "Murcia  Región de",
+          "National Total",
+          "Navarra  Comunidad Foral de",
+          "New dwelling",
+          "País Vasco",
+          "Precios",
+          "Precios de las distintas actividades sectoriales",
+          "Prices",
+          "Prices of the different sectoral activities",
+          "Rioja  La",
+          "Second-hand dwelling",
+          "Statistics",
+          "Total Nacional",
+          "Variación anual",
+          "Vivienda nueva",
+          "Vivienda segunda mano",
+          "Índices y tasas"
+        ],
+        "modified": "mar, 10 mar 2020 09:08:32 GMT+0000",
+        "publisher": "http://datos.gob.es/recurso/sector-publico/org/Organismo/EA0010587",
+        "spatial": [
+          "http://datos.gob.es/recurso/sector-publico/territorio/Autonomia/Andalucia",
+          "http://datos.gob.es/recurso/sector-publico/territorio/Autonomia/Aragon",
+          "http://datos.gob.es/recurso/sector-publico/territorio/Autonomia/Canarias",
+          "http://datos.gob.es/recurso/sector-publico/territorio/Autonomia/Cantabria",
+          "http://datos.gob.es/recurso/sector-publico/territorio/Autonomia/Castilla-La-Mancha",
+          "http://datos.gob.es/recurso/sector-publico/territorio/Autonomia/Castilla-Leon",
+          "http://datos.gob.es/recurso/sector-publico/territorio/Autonomia/Cataluna",
+          "http://datos.gob.es/recurso/sector-publico/territorio/Autonomia/Ceuta",
+          "http://datos.gob.es/recurso/sector-publico/territorio/Autonomia/Comunidad-Foral-Navarra",
+          "http://datos.gob.es/recurso/sector-publico/territorio/Autonomia/Comunidad-Madrid",
+          "http://datos.gob.es/recurso/sector-publico/territorio/Autonomia/Comunitat-Valenciana",
+          "http://datos.gob.es/recurso/sector-publico/territorio/Autonomia/Extremadura",
+          "http://datos.gob.es/recurso/sector-publico/territorio/Autonomia/Galicia",
+          "http://datos.gob.es/recurso/sector-publico/territorio/Autonomia/Illes-Balears",
+          "http://datos.gob.es/recurso/sector-publico/territorio/Autonomia/La-Rioja",
+          "http://datos.gob.es/recurso/sector-publico/territorio/Autonomia/Melilla",
+          "http://datos.gob.es/recurso/sector-publico/territorio/Autonomia/Pais-Vasco",
+          "http://datos.gob.es/recurso/sector-publico/territorio/Autonomia/Principado-Asturias",
+          "http://datos.gob.es/recurso/sector-publico/territorio/Autonomia/Region-Murcia"
+        ],
+        "theme": [
+          "http://datos.gob.es/kos/sector-publico/sector/economia",
+          "http://datos.gob.es/kos/sector-publico/sector/vivienda"
+        ],
+        "title": [
+          "Autonomous Communities index  general  new dwelling and second-hand dwelling. Annual. Comunidades autónomas.  Housing Price Index  HPI   (API identifier: 25173)",
+          "Índices por CCAA  general  vivienda nueva y de segunda mano. Anual. Comunidades autónomas.  Índice de Precios de la Vivienda  IPV   (Identificador API:  25173)"
+        ],
+        "type": "http://www.w3.org/ns/dcat#Dataset"
+      },
+      {
+        "_about": "http://datos.gob.es/catalogo/ea0010587-indices-por-ccaa-general-vivienda-nueva-y-de-segunda-mano-trimestral-comunidades-autonomas-indice-de-precios-de-la-vivienda-ipv-identificador-api-21841",
+        "description": [
+          {
+            "_value": "Tabla de INEbase\nÍndices por CCAA  general  vivienda nueva y de segunda mano. Trimestral. Comunidades autónomas.  Índice de Precios de la Vivienda  IPV",
+            "_lang": "es"
+          },
+          {
+            "_value": "Table of INEBase\nAutonomous Communities index  general  new dwelling and second-hand dwelling. Quarterly. Comunidades autónomas.  Housing Price Index  HPI",
+            "_lang": "en"
+          }
+        ],
+        "distribution": [
+          {
+            "_about": "http://datos.gob.es/catalogo/ea0010587-indices-por-ccaa-general-vivienda-nueva-y-de-segunda-mano-trimestral-comunidades-autonomas-indice-de-precios-de-la-vivienda-ipv-identificador-api-21841/resource/011141db-dc23-480f-992a-f354d69040d8",
+            "accessURL": "http://servicios.ine.es/wstempus/js/es/DATOS_TABLA/2184?tip=AM",
+            "format": [
+              {
+                "_about": "http://datos.gob.es/catalogo/ea0010587-indices-por-ccaa-general-vivienda-nueva-y-de-segunda-mano-trimestral-comunidades-autonomas-indice-de-precios-de-la-vivienda-ipv-identificador-api-21841/resource/011141db-dc23-480f-992a-f354d69040d8/format",
+                "type": "http://purl.org/dc/terms/IMT",
+                "value": "application/json"
+              },
+              "http://publications.europa.eu/resource/authority/file-type/JSON"
+            ],
+            "title": [
+              "Json",
+              "Json"
+            ],
+            "type": "http://www.w3.org/ns/dcat#Distribution"
+          },
+          {
+            "_about": "http://datos.gob.es/catalogo/ea0010587-indices-por-ccaa-general-vivienda-nueva-y-de-segunda-mano-trimestral-comunidades-autonomas-indice-de-precios-de-la-vivienda-ipv-identificador-api-21841/resource/4451cebf-7810-4251-a93b-77f07a68b966",
+            "accessURL": "http://www.ine.es/jaxiT3/Tabla.htm?t=2184",
+            "format": [
+              {
+                "_about": "http://datos.gob.es/catalogo/ea0010587-indices-por-ccaa-general-vivienda-nueva-y-de-segunda-mano-trimestral-comunidades-autonomas-indice-de-precios-de-la-vivienda-ipv-identificador-api-21841/resource/4451cebf-7810-4251-a93b-77f07a68b966/format",
+                "type": "http://purl.org/dc/terms/IMT",
+                "value": "text/html"
+              },
+              "http://publications.europa.eu/resource/authority/file-type/HTML"
+            ],
+            "title": [
+              "Html",
+              "Html"
+            ],
+            "type": "http://www.w3.org/ns/dcat#Distribution"
+          },
+          {
+            "_about": "http://datos.gob.es/catalogo/ea0010587-indices-por-ccaa-general-vivienda-nueva-y-de-segunda-mano-trimestral-comunidades-autonomas-indice-de-precios-de-la-vivienda-ipv-identificador-api-21841/resource/60a80d42-49fe-40ae-8354-540ed964655d",
+            "accessURL": "http://www.ine.es/jaxiT3/files/t/es/csv/2184.csv",
+            "format": [
+              {
+                "_about": "http://datos.gob.es/catalogo/ea0010587-indices-por-ccaa-general-vivienda-nueva-y-de-segunda-mano-trimestral-comunidades-autonomas-indice-de-precios-de-la-vivienda-ipv-identificador-api-21841/resource/60a80d42-49fe-40ae-8354-540ed964655d/format",
+                "type": "http://purl.org/dc/terms/IMT",
+                "value": "text/csv"
+              },
+              "http://publications.europa.eu/resource/authority/file-type/CSV"
+            ],
+            "title": [
+              "CSV separado por tabuladores",
+              "CSV separated by tab"
+            ],
+            "type": "http://www.w3.org/ns/dcat#Distribution"
+          },
+          {
+            "_about": "http://datos.gob.es/catalogo/ea0010587-indices-por-ccaa-general-vivienda-nueva-y-de-segunda-mano-trimestral-comunidades-autonomas-indice-de-precios-de-la-vivienda-ipv-identificador-api-21841/resource/6178d72c-b588-4223-acf7-b39e85c46a02",
+            "accessURL": "http://www.ine.es/jaxiT3/files/t/es/px/2184.px",
+            "format": [
+              {
+                "_about": "http://datos.gob.es/catalogo/ea0010587-indices-por-ccaa-general-vivienda-nueva-y-de-segunda-mano-trimestral-comunidades-autonomas-indice-de-precios-de-la-vivienda-ipv-identificador-api-21841/resource/6178d72c-b588-4223-acf7-b39e85c46a02/format",
+                "type": "http://purl.org/dc/terms/IMT",
+                "value": "text/pc-axis"
+              },
+              "http://publications.europa.eu/resource/authority/file-type/PC-Axis"
+            ],
+            "title": [
+              "Pc-Axis",
+              "Pc-Axis"
+            ],
+            "type": "http://www.w3.org/ns/dcat#Distribution"
+          },
+          {
+            "_about": "http://datos.gob.es/catalogo/ea0010587-indices-por-ccaa-general-vivienda-nueva-y-de-segunda-mano-trimestral-comunidades-autonomas-indice-de-precios-de-la-vivienda-ipv-identificador-api-21841/resource/6798319c-38c8-495a-942b-0fa76ac02617",
+            "accessURL": "http://www.ine.es/jaxiT3/files/t/es/csv_c/2184.csv_c",
+            "format": [
+              {
+                "_about": "http://datos.gob.es/catalogo/ea0010587-indices-por-ccaa-general-vivienda-nueva-y-de-segunda-mano-trimestral-comunidades-autonomas-indice-de-precios-de-la-vivienda-ipv-identificador-api-21841/resource/6798319c-38c8-495a-942b-0fa76ac02617/format",
+                "type": "http://purl.org/dc/terms/IMT",
+                "value": "text/csv"
+              },
+              "http://publications.europa.eu/resource/authority/file-type/CSV"
+            ],
+            "title": [
+              "CSV separado por ,",
+              "CSV separated by comma"
+            ],
+            "type": "http://www.w3.org/ns/dcat#Distribution"
+          },
+          {
+            "_about": "http://datos.gob.es/catalogo/ea0010587-indices-por-ccaa-general-vivienda-nueva-y-de-segunda-mano-trimestral-comunidades-autonomas-indice-de-precios-de-la-vivienda-ipv-identificador-api-21841/resource/9fa68a43-4955-4714-9bc8-262bbba4cd3c",
+            "accessURL": "http://www.ine.es/jaxiT3/files/t/es/xls/2184.xls",
+            "format": [
+              {
+                "_about": "http://datos.gob.es/catalogo/ea0010587-indices-por-ccaa-general-vivienda-nueva-y-de-segunda-mano-trimestral-comunidades-autonomas-indice-de-precios-de-la-vivienda-ipv-identificador-api-21841/resource/9fa68a43-4955-4714-9bc8-262bbba4cd3c/format",
+                "type": "http://purl.org/dc/terms/IMT",
+                "value": "application/vnd.ms-excel"
+              },
+              "http://publications.europa.eu/resource/authority/file-type/XLS"
+            ],
+            "title": [
+              "Excel: Extensión XLS",
+              "Excel: XLS extension"
+            ],
+            "type": "http://www.w3.org/ns/dcat#Distribution"
+          },
+          {
+            "_about": "http://datos.gob.es/catalogo/ea0010587-indices-por-ccaa-general-vivienda-nueva-y-de-segunda-mano-trimestral-comunidades-autonomas-indice-de-precios-de-la-vivienda-ipv-identificador-api-21841/resource/c943fbc6-2452-4e31-add3-ddab0742f236",
+            "accessURL": "http://www.ine.es/jaxiT3/files/t/es/csv_sc/2184.csv_sc",
+            "format": [
+              {
+                "_about": "http://datos.gob.es/catalogo/ea0010587-indices-por-ccaa-general-vivienda-nueva-y-de-segunda-mano-trimestral-comunidades-autonomas-indice-de-precios-de-la-vivienda-ipv-identificador-api-21841/resource/c943fbc6-2452-4e31-add3-ddab0742f236/format",
+                "type": "http://purl.org/dc/terms/IMT",
+                "value": "text/csv"
+              },
+              "http://publications.europa.eu/resource/authority/file-type/CSV"
+            ],
+            "title": [
+              "CSV separado por ;",
+              "CSV separated by semicolons"
+            ],
+            "type": "http://www.w3.org/ns/dcat#Distribution"
+          },
+          {
+            "_about": "http://datos.gob.es/catalogo/ea0010587-indices-por-ccaa-general-vivienda-nueva-y-de-segunda-mano-trimestral-comunidades-autonomas-indice-de-precios-de-la-vivienda-ipv-identificador-api-21841/resource/deae03b0-a8af-4edb-af7f-eba798333180",
+            "accessURL": "http://www.ine.es/jaxiT3/files/t/es/xlsx/2184.xlsx",
+            "format": [
+              {
+                "_about": "http://datos.gob.es/catalogo/ea0010587-indices-por-ccaa-general-vivienda-nueva-y-de-segunda-mano-trimestral-comunidades-autonomas-indice-de-precios-de-la-vivienda-ipv-identificador-api-21841/resource/deae03b0-a8af-4edb-af7f-eba798333180/format",
+                "type": "http://purl.org/dc/terms/IMT",
+                "value": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+              },
+              "http://publications.europa.eu/resource/authority/file-type/XLSX"
+            ],
+            "title": [
+              "Excel: Extension XLSx",
+              "Excel: XLSx extension"
+            ],
+            "type": "http://www.w3.org/ns/dcat#Distribution"
+          }
+        ],
+        "identifier": "urn:ine%3Aes%3ATABLA%3AT3%3A21%3A2184",
+        "keyword": [
+          "Andalucía",
+          "Annual variation",
+          "Aragón",
+          "Asturias  Principado de",
+          "Autonomous Communities and Cities",
+          "Balears  Illes",
+          "Base",
+          "Base 2007",
+          "Canarias",
+          "Cantabria",
+          "Castilla - La Mancha",
+          "Castilla y León",
+          "Cataluña",
+          "Ceuta",
+          "Comunidades y Ciudades Autónomas",
+          "Comunitat Valenciana",
+          "Construcción y vivienda",
+          "Construction and housing",
+          "Estadísticas",
+          "Extremadura",
+          "Galicia",
+          "General",
+          "General  vivienda nueva y de segunda mano",
+          "IPV",
+          "Index",
+          "Indices and rates",
+          "Madrid  Comunidad de",
+          "Melilla",
+          "Murcia  Región de",
+          "National Total",
+          "Navarra  Comunidad Foral de",
+          "New dwelling",
+          "País Vasco",
+          "Precios",
+          "Precios de las distintas actividades sectoriales",
+          "Prices",
+          "Prices of the different sectoral activities",
+          "Quarterly variation rate",
+          "Rioja  La",
+          "Second-hand dwelling",
+          "Statistics",
+          "Total Nacional",
+          "Variación anual",
+          "Variación en lo que va de año",
+          "Variación trimestral",
+          "Vivienda nueva",
+          "Vivienda segunda mano",
+          "Year-to-date variation rate",
+          "Índice",
+          "Índices y tasas"
+        ],
+        "modified": "mié, 21 mar 2018 15:00:39 GMT+0000",
+        "publisher": "http://datos.gob.es/recurso/sector-publico/org/Organismo/EA0010587",
+        "spatial": [
+          "http://datos.gob.es/recurso/sector-publico/territorio/Autonomia/Andalucia",
+          "http://datos.gob.es/recurso/sector-publico/territorio/Autonomia/Aragon",
+          "http://datos.gob.es/recurso/sector-publico/territorio/Autonomia/Canarias",
+          "http://datos.gob.es/recurso/sector-publico/territorio/Autonomia/Cantabria",
+          "http://datos.gob.es/recurso/sector-publico/territorio/Autonomia/Castilla-La-Mancha",
+          "http://datos.gob.es/recurso/sector-publico/territorio/Autonomia/Castilla-Leon",
+          "http://datos.gob.es/recurso/sector-publico/territorio/Autonomia/Cataluna",
+          "http://datos.gob.es/recurso/sector-publico/territorio/Autonomia/Ceuta",
+          "http://datos.gob.es/recurso/sector-publico/territorio/Autonomia/Comunidad-Foral-Navarra",
+          "http://datos.gob.es/recurso/sector-publico/territorio/Autonomia/Comunidad-Madrid",
+          "http://datos.gob.es/recurso/sector-publico/territorio/Autonomia/Comunitat-Valenciana",
+          "http://datos.gob.es/recurso/sector-publico/territorio/Autonomia/Extremadura",
+          "http://datos.gob.es/recurso/sector-publico/territorio/Autonomia/Galicia",
+          "http://datos.gob.es/recurso/sector-publico/territorio/Autonomia/Illes-Balears",
+          "http://datos.gob.es/recurso/sector-publico/territorio/Autonomia/La-Rioja",
+          "http://datos.gob.es/recurso/sector-publico/territorio/Autonomia/Melilla",
+          "http://datos.gob.es/recurso/sector-publico/territorio/Autonomia/Pais-Vasco",
+          "http://datos.gob.es/recurso/sector-publico/territorio/Autonomia/Principado-Asturias",
+          "http://datos.gob.es/recurso/sector-publico/territorio/Autonomia/Region-Murcia"
+        ],
+        "theme": [
+          "http://datos.gob.es/kos/sector-publico/sector/economia",
+          "http://datos.gob.es/kos/sector-publico/sector/vivienda"
+        ],
+        "title": [
+          "Autonomous Communities index  general  new dwelling and second-hand dwelling. Quarterly. Comunidades autónomas.  Housing Price Index  HPI   (API identifier: 2184)",
+          "Índices por CCAA  general  vivienda nueva y de segunda mano. Trimestral. Comunidades autónomas.  Índice de Precios de la Vivienda  IPV   (Identificador API:  2184)"
+        ],
+        "type": "http://www.w3.org/ns/dcat#Dataset"
+      },
+      {
+        "_about": "http://datos.gob.es/catalogo/ea0010587-indices-por-ccaa-general-vivienda-nueva-y-de-segunda-mano-trimestral-comunidades-autonomas-indice-de-precios-de-la-vivienda-ipv-identificador-api-251711",
+        "description": [
+          {
+            "_value": "Tabla de INEbase\nÍndices por CCAA  general  vivienda nueva y de segunda mano. Trimestral. Comunidades autónomas.  Índice de Precios de la Vivienda  IPV",
+            "_lang": "es"
+          },
+          {
+            "_value": "Table of INEBase\nAutonomous Communities index  general  new dwelling and second-hand dwelling. Quarterly. Comunidades autónomas.  Housing Price Index  HPI",
+            "_lang": "en"
+          }
+        ],
+        "distribution": [
+          {
+            "_about": "http://datos.gob.es/catalogo/ea0010587-indices-por-ccaa-general-vivienda-nueva-y-de-segunda-mano-trimestral-comunidades-autonomas-indice-de-precios-de-la-vivienda-ipv-identificador-api-251711/resource/0f93750e-22ea-44c6-b262-6c71bb937bf1",
+            "accessURL": "http://www.ine.es/jaxiT3/files/t/es/xls/25171.xls",
+            "format": [
+              {
+                "_about": "http://datos.gob.es/catalogo/ea0010587-indices-por-ccaa-general-vivienda-nueva-y-de-segunda-mano-trimestral-comunidades-autonomas-indice-de-precios-de-la-vivienda-ipv-identificador-api-251711/resource/0f93750e-22ea-44c6-b262-6c71bb937bf1/format",
+                "type": "http://purl.org/dc/terms/IMT",
+                "value": "application/vnd.ms-excel"
+              },
+              "http://publications.europa.eu/resource/authority/file-type/XLS"
+            ],
+            "title": [
+              "Excel: Extensión XLS",
+              "Excel: XLS extension"
+            ],
+            "type": "http://www.w3.org/ns/dcat#Distribution"
+          },
+          {
+            "_about": "http://datos.gob.es/catalogo/ea0010587-indices-por-ccaa-general-vivienda-nueva-y-de-segunda-mano-trimestral-comunidades-autonomas-indice-de-precios-de-la-vivienda-ipv-identificador-api-251711/resource/166fbb12-907a-46e9-bf78-6c30d1cad8ea",
+            "accessURL": "http://www.ine.es/jaxiT3/files/t/es/px/25171.px",
+            "format": [
+              {
+                "_about": "http://datos.gob.es/catalogo/ea0010587-indices-por-ccaa-general-vivienda-nueva-y-de-segunda-mano-trimestral-comunidades-autonomas-indice-de-precios-de-la-vivienda-ipv-identificador-api-251711/resource/166fbb12-907a-46e9-bf78-6c30d1cad8ea/format",
+                "type": "http://purl.org/dc/terms/IMT",
+                "value": "text/pc-axis"
+              },
+              "http://publications.europa.eu/resource/authority/file-type/PC-Axis"
+            ],
+            "title": [
+              "Pc-Axis",
+              "Pc-Axis"
+            ],
+            "type": "http://www.w3.org/ns/dcat#Distribution"
+          },
+          {
+            "_about": "http://datos.gob.es/catalogo/ea0010587-indices-por-ccaa-general-vivienda-nueva-y-de-segunda-mano-trimestral-comunidades-autonomas-indice-de-precios-de-la-vivienda-ipv-identificador-api-251711/resource/1e3cc622-f74d-4986-af09-41f6e07fb6f3",
+            "accessURL": "http://servicios.ine.es/wstempus/js/es/DATOS_TABLA/25171?tip=AM",
+            "format": [
+              {
+                "_about": "http://datos.gob.es/catalogo/ea0010587-indices-por-ccaa-general-vivienda-nueva-y-de-segunda-mano-trimestral-comunidades-autonomas-indice-de-precios-de-la-vivienda-ipv-identificador-api-251711/resource/1e3cc622-f74d-4986-af09-41f6e07fb6f3/format",
+                "type": "http://purl.org/dc/terms/IMT",
+                "value": "application/json"
+              },
+              "http://publications.europa.eu/resource/authority/file-type/JSON"
+            ],
+            "title": [
+              "Json",
+              "Json"
+            ],
+            "type": "http://www.w3.org/ns/dcat#Distribution"
+          },
+          {
+            "_about": "http://datos.gob.es/catalogo/ea0010587-indices-por-ccaa-general-vivienda-nueva-y-de-segunda-mano-trimestral-comunidades-autonomas-indice-de-precios-de-la-vivienda-ipv-identificador-api-251711/resource/311f7c1f-7941-4e2e-80a2-83a7e9ed82ee",
+            "accessURL": "http://www.ine.es/jaxiT3/Tabla.htm?t=25171",
+            "format": [
+              {
+                "_about": "http://datos.gob.es/catalogo/ea0010587-indices-por-ccaa-general-vivienda-nueva-y-de-segunda-mano-trimestral-comunidades-autonomas-indice-de-precios-de-la-vivienda-ipv-identificador-api-251711/resource/311f7c1f-7941-4e2e-80a2-83a7e9ed82ee/format",
+                "type": "http://purl.org/dc/terms/IMT",
+                "value": "text/html"
+              },
+              "http://publications.europa.eu/resource/authority/file-type/HTML"
+            ],
+            "title": [
+              "Html",
+              "Html"
+            ],
+            "type": "http://www.w3.org/ns/dcat#Distribution"
+          },
+          {
+            "_about": "http://datos.gob.es/catalogo/ea0010587-indices-por-ccaa-general-vivienda-nueva-y-de-segunda-mano-trimestral-comunidades-autonomas-indice-de-precios-de-la-vivienda-ipv-identificador-api-251711/resource/5ed82a36-82f7-4afb-8842-1e712a41bd2c",
+            "accessURL": "http://www.ine.es/jaxiT3/files/t/es/csv/25171.csv",
+            "format": [
+              {
+                "_about": "http://datos.gob.es/catalogo/ea0010587-indices-por-ccaa-general-vivienda-nueva-y-de-segunda-mano-trimestral-comunidades-autonomas-indice-de-precios-de-la-vivienda-ipv-identificador-api-251711/resource/5ed82a36-82f7-4afb-8842-1e712a41bd2c/format",
+                "type": "http://purl.org/dc/terms/IMT",
+                "value": "text/csv"
+              },
+              "http://publications.europa.eu/resource/authority/file-type/CSV"
+            ],
+            "title": [
+              "CSV separado por tabuladores",
+              "CSV separated by tab"
+            ],
+            "type": "http://www.w3.org/ns/dcat#Distribution"
+          },
+          {
+            "_about": "http://datos.gob.es/catalogo/ea0010587-indices-por-ccaa-general-vivienda-nueva-y-de-segunda-mano-trimestral-comunidades-autonomas-indice-de-precios-de-la-vivienda-ipv-identificador-api-251711/resource/9451a9b8-bc92-44ba-864f-46d1be14f213",
+            "accessURL": "http://www.ine.es/jaxiT3/files/t/es/csv_c/25171.csv_c",
+            "format": [
+              {
+                "_about": "http://datos.gob.es/catalogo/ea0010587-indices-por-ccaa-general-vivienda-nueva-y-de-segunda-mano-trimestral-comunidades-autonomas-indice-de-precios-de-la-vivienda-ipv-identificador-api-251711/resource/9451a9b8-bc92-44ba-864f-46d1be14f213/format",
+                "type": "http://purl.org/dc/terms/IMT",
+                "value": "text/csv"
+              },
+              "http://publications.europa.eu/resource/authority/file-type/CSV"
+            ],
+            "title": [
+              "CSV separado por ,",
+              "CSV separated by comma"
+            ],
+            "type": "http://www.w3.org/ns/dcat#Distribution"
+          },
+          {
+            "_about": "http://datos.gob.es/catalogo/ea0010587-indices-por-ccaa-general-vivienda-nueva-y-de-segunda-mano-trimestral-comunidades-autonomas-indice-de-precios-de-la-vivienda-ipv-identificador-api-251711/resource/aef505c1-4e68-4021-8039-5ecb5afd8274",
+            "accessURL": "http://www.ine.es/jaxiT3/files/t/es/xlsx/25171.xlsx",
+            "format": [
+              {
+                "_about": "http://datos.gob.es/catalogo/ea0010587-indices-por-ccaa-general-vivienda-nueva-y-de-segunda-mano-trimestral-comunidades-autonomas-indice-de-precios-de-la-vivienda-ipv-identificador-api-251711/resource/aef505c1-4e68-4021-8039-5ecb5afd8274/format",
+                "type": "http://purl.org/dc/terms/IMT",
+                "value": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+              },
+              "http://publications.europa.eu/resource/authority/file-type/XLSX"
+            ],
+            "title": [
+              "Excel: Extension XLSx",
+              "Excel: XLSx extension"
+            ],
+            "type": "http://www.w3.org/ns/dcat#Distribution"
+          },
+          {
+            "_about": "http://datos.gob.es/catalogo/ea0010587-indices-por-ccaa-general-vivienda-nueva-y-de-segunda-mano-trimestral-comunidades-autonomas-indice-de-precios-de-la-vivienda-ipv-identificador-api-251711/resource/bc84f6bb-e840-47a3-90ca-04c0e7bfd54b",
+            "accessURL": "http://www.ine.es/jaxiT3/files/t/es/csv_sc/25171.csv_sc",
+            "format": [
+              {
+                "_about": "http://datos.gob.es/catalogo/ea0010587-indices-por-ccaa-general-vivienda-nueva-y-de-segunda-mano-trimestral-comunidades-autonomas-indice-de-precios-de-la-vivienda-ipv-identificador-api-251711/resource/bc84f6bb-e840-47a3-90ca-04c0e7bfd54b/format",
+                "type": "http://purl.org/dc/terms/IMT",
+                "value": "text/csv"
+              },
+              "http://publications.europa.eu/resource/authority/file-type/CSV"
+            ],
+            "title": [
+              "CSV separado por ;",
+              "CSV separated by semicolons"
+            ],
+            "type": "http://www.w3.org/ns/dcat#Distribution"
+          }
+        ],
+        "identifier": "urn:ine%3Aes%3ATABLA%3AT3%3A21%3A25171",
+        "keyword": [
+          "Andalucía",
+          "Annual variation  for monthly series",
+          "Aragón",
+          "Asturias  Principado de",
+          "Autonomous Communities and Cities",
+          "Balears  Illes",
+          "Canarias",
+          "Cantabria",
+          "Castilla - La Mancha",
+          "Castilla y León",
+          "Cataluña",
+          "Ceuta",
+          "Comunidades y Ciudades Autónomas",
+          "Comunitat Valenciana",
+          "Construcción y vivienda",
+          "Construction and housing",
+          "Estadísticas",
+          "Extremadura",
+          "Galicia",
+          "General",
+          "General  vivienda nueva y de segunda mano",
+          "IPV",
+          "Index",
+          "Index type",
+          "Indices and rates",
+          "Madrid  Comunidad de",
+          "Melilla",
+          "Murcia  Región de",
+          "National Total",
+          "Navarra  Comunidad Foral de",
+          "New dwelling",
+          "País Vasco",
+          "Precios",
+          "Precios de las distintas actividades sectoriales",
+          "Prices",
+          "Prices of the different sectoral activities",
+          "Quarterly variation rate",
+          "Rioja  La",
+          "Second-hand dwelling",
+          "Statistics",
+          "Total Nacional",
+          "Variación anual",
+          "Variación en lo que va de año",
+          "Variación trimestral",
+          "Vivienda nueva",
+          "Vivienda segunda mano",
+          "Year-to-date variation rate",
+          "Índice",
+          "Índices y tasas"
+        ],
+        "modified": "mar, 08 sep 2020 09:00:01 GMT+0000",
+        "publisher": "http://datos.gob.es/recurso/sector-publico/org/Organismo/EA0010587",
+        "spatial": [
+          "http://datos.gob.es/recurso/sector-publico/territorio/Autonomia/Andalucia",
+          "http://datos.gob.es/recurso/sector-publico/territorio/Autonomia/Aragon",
+          "http://datos.gob.es/recurso/sector-publico/territorio/Autonomia/Canarias",
+          "http://datos.gob.es/recurso/sector-publico/territorio/Autonomia/Cantabria",
+          "http://datos.gob.es/recurso/sector-publico/territorio/Autonomia/Castilla-La-Mancha",
+          "http://datos.gob.es/recurso/sector-publico/territorio/Autonomia/Castilla-Leon",
+          "http://datos.gob.es/recurso/sector-publico/territorio/Autonomia/Cataluna",
+          "http://datos.gob.es/recurso/sector-publico/territorio/Autonomia/Ceuta",
+          "http://datos.gob.es/recurso/sector-publico/territorio/Autonomia/Comunidad-Foral-Navarra",
+          "http://datos.gob.es/recurso/sector-publico/territorio/Autonomia/Comunidad-Madrid",
+          "http://datos.gob.es/recurso/sector-publico/territorio/Autonomia/Comunitat-Valenciana",
+          "http://datos.gob.es/recurso/sector-publico/territorio/Autonomia/Extremadura",
+          "http://datos.gob.es/recurso/sector-publico/territorio/Autonomia/Galicia",
+          "http://datos.gob.es/recurso/sector-publico/territorio/Autonomia/Illes-Balears",
+          "http://datos.gob.es/recurso/sector-publico/territorio/Autonomia/La-Rioja",
+          "http://datos.gob.es/recurso/sector-publico/territorio/Autonomia/Melilla",
+          "http://datos.gob.es/recurso/sector-publico/territorio/Autonomia/Pais-Vasco",
+          "http://datos.gob.es/recurso/sector-publico/territorio/Autonomia/Principado-Asturias",
+          "http://datos.gob.es/recurso/sector-publico/territorio/Autonomia/Region-Murcia"
+        ],
+        "theme": [
+          "http://datos.gob.es/kos/sector-publico/sector/economia",
+          "http://datos.gob.es/kos/sector-publico/sector/vivienda"
+        ],
+        "title": [
+          "Autonomous Communities index  general  new dwelling and second-hand dwelling. Quarterly. Comunidades autónomas.  Housing Price Index  HPI   (API identifier: 25171)",
+          "Índices por CCAA  general  vivienda nueva y de segunda mano. Trimestral. Comunidades autónomas.  Índice de Precios de la Vivienda  IPV   (Identificador API:  25171)"
+        ],
+        "type": "http://www.w3.org/ns/dcat#Dataset"
+      },
+      {
+        "_about": "http://datos.gob.es/catalogo/ea0010587-ponderaciones-ipv-nacional-general-vivienda-nueva-y-de-segunda-mano-anual-comunidades-autonomas-indice-de-precios-de-la-vivienda-ipv-identificador-api-21871",
+        "description": [
+          {
+            "_value": "Tabla de INEbase\nPonderaciones IPV nacional  general  vivienda nueva y de segunda mano. Anual. Comunidades autónomas.  Índice de Precios de la Vivienda  IPV",
+            "_lang": "es"
+          },
+          {
+            "_value": "Table of INEBase\nWeightings HPI national  general  new dwelling and second-hand dwelling. Annual. Comunidades autónomas.  Housing Price Index  HPI",
+            "_lang": "en"
+          }
+        ],
+        "distribution": [
+          {
+            "_about": "http://datos.gob.es/catalogo/ea0010587-ponderaciones-ipv-nacional-general-vivienda-nueva-y-de-segunda-mano-anual-comunidades-autonomas-indice-de-precios-de-la-vivienda-ipv-identificador-api-21871/resource/261f0119-5e5a-4088-9679-bbf14570a017",
+            "accessURL": "http://www.ine.es/jaxiT3/files/t/es/csv_c/2187.csv_c",
+            "format": [
+              {
+                "_about": "http://datos.gob.es/catalogo/ea0010587-ponderaciones-ipv-nacional-general-vivienda-nueva-y-de-segunda-mano-anual-comunidades-autonomas-indice-de-precios-de-la-vivienda-ipv-identificador-api-21871/resource/261f0119-5e5a-4088-9679-bbf14570a017/format",
+                "type": "http://purl.org/dc/terms/IMT",
+                "value": "text/csv"
+              },
+              "http://publications.europa.eu/resource/authority/file-type/CSV"
+            ],
+            "title": [
+              "CSV separado por ,",
+              "CSV separated by comma"
+            ],
+            "type": "http://www.w3.org/ns/dcat#Distribution"
+          },
+          {
+            "_about": "http://datos.gob.es/catalogo/ea0010587-ponderaciones-ipv-nacional-general-vivienda-nueva-y-de-segunda-mano-anual-comunidades-autonomas-indice-de-precios-de-la-vivienda-ipv-identificador-api-21871/resource/6c6416b5-3bfe-400a-b730-9dba9a6424a6",
+            "accessURL": "http://www.ine.es/jaxiT3/files/t/es/px/2187.px",
+            "format": [
+              {
+                "_about": "http://datos.gob.es/catalogo/ea0010587-ponderaciones-ipv-nacional-general-vivienda-nueva-y-de-segunda-mano-anual-comunidades-autonomas-indice-de-precios-de-la-vivienda-ipv-identificador-api-21871/resource/6c6416b5-3bfe-400a-b730-9dba9a6424a6/format",
+                "type": "http://purl.org/dc/terms/IMT",
+                "value": "text/pc-axis"
+              },
+              "http://publications.europa.eu/resource/authority/file-type/PC-Axis"
+            ],
+            "title": [
+              "Pc-Axis",
+              "Pc-Axis"
+            ],
+            "type": "http://www.w3.org/ns/dcat#Distribution"
+          },
+          {
+            "_about": "http://datos.gob.es/catalogo/ea0010587-ponderaciones-ipv-nacional-general-vivienda-nueva-y-de-segunda-mano-anual-comunidades-autonomas-indice-de-precios-de-la-vivienda-ipv-identificador-api-21871/resource/87492b25-b6ce-49cc-8d98-b1750da6449c",
+            "accessURL": "http://www.ine.es/jaxiT3/Tabla.htm?t=2187",
+            "format": [
+              {
+                "_about": "http://datos.gob.es/catalogo/ea0010587-ponderaciones-ipv-nacional-general-vivienda-nueva-y-de-segunda-mano-anual-comunidades-autonomas-indice-de-precios-de-la-vivienda-ipv-identificador-api-21871/resource/87492b25-b6ce-49cc-8d98-b1750da6449c/format",
+                "type": "http://purl.org/dc/terms/IMT",
+                "value": "text/html"
+              },
+              "http://publications.europa.eu/resource/authority/file-type/HTML"
+            ],
+            "title": [
+              "Html",
+              "Html"
+            ],
+            "type": "http://www.w3.org/ns/dcat#Distribution"
+          },
+          {
+            "_about": "http://datos.gob.es/catalogo/ea0010587-ponderaciones-ipv-nacional-general-vivienda-nueva-y-de-segunda-mano-anual-comunidades-autonomas-indice-de-precios-de-la-vivienda-ipv-identificador-api-21871/resource/b1ff4838-c54a-403a-b919-290fb06cecdb",
+            "accessURL": "http://www.ine.es/jaxiT3/files/t/es/xlsx/2187.xlsx",
+            "format": [
+              {
+                "_about": "http://datos.gob.es/catalogo/ea0010587-ponderaciones-ipv-nacional-general-vivienda-nueva-y-de-segunda-mano-anual-comunidades-autonomas-indice-de-precios-de-la-vivienda-ipv-identificador-api-21871/resource/b1ff4838-c54a-403a-b919-290fb06cecdb/format",
+                "type": "http://purl.org/dc/terms/IMT",
+                "value": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+              },
+              "http://publications.europa.eu/resource/authority/file-type/XLSX"
+            ],
+            "title": [
+              "Excel: Extension XLSx",
+              "Excel: XLSx extension"
+            ],
+            "type": "http://www.w3.org/ns/dcat#Distribution"
+          },
+          {
+            "_about": "http://datos.gob.es/catalogo/ea0010587-ponderaciones-ipv-nacional-general-vivienda-nueva-y-de-segunda-mano-anual-comunidades-autonomas-indice-de-precios-de-la-vivienda-ipv-identificador-api-21871/resource/ea1b9e89-a1f2-484b-9db9-ca6e6d1ea1f6",
+            "accessURL": "http://servicios.ine.es/wstempus/js/es/DATOS_TABLA/2187?tip=AM",
+            "format": [
+              {
+                "_about": "http://datos.gob.es/catalogo/ea0010587-ponderaciones-ipv-nacional-general-vivienda-nueva-y-de-segunda-mano-anual-comunidades-autonomas-indice-de-precios-de-la-vivienda-ipv-identificador-api-21871/resource/ea1b9e89-a1f2-484b-9db9-ca6e6d1ea1f6/format",
+                "type": "http://purl.org/dc/terms/IMT",
+                "value": "application/json"
+              },
+              "http://publications.europa.eu/resource/authority/file-type/JSON"
+            ],
+            "title": [
+              "Json",
+              "Json"
+            ],
+            "type": "http://www.w3.org/ns/dcat#Distribution"
+          },
+          {
+            "_about": "http://datos.gob.es/catalogo/ea0010587-ponderaciones-ipv-nacional-general-vivienda-nueva-y-de-segunda-mano-anual-comunidades-autonomas-indice-de-precios-de-la-vivienda-ipv-identificador-api-21871/resource/ea3fed62-c5c8-4e6f-b439-5d4b3a05f4fe",
+            "accessURL": "http://www.ine.es/jaxiT3/files/t/es/csv_sc/2187.csv_sc",
+            "format": [
+              {
+                "_about": "http://datos.gob.es/catalogo/ea0010587-ponderaciones-ipv-nacional-general-vivienda-nueva-y-de-segunda-mano-anual-comunidades-autonomas-indice-de-precios-de-la-vivienda-ipv-identificador-api-21871/resource/ea3fed62-c5c8-4e6f-b439-5d4b3a05f4fe/format",
+                "type": "http://purl.org/dc/terms/IMT",
+                "value": "text/csv"
+              },
+              "http://publications.europa.eu/resource/authority/file-type/CSV"
+            ],
+            "title": [
+              "CSV separado por ;",
+              "CSV separated by semicolons"
+            ],
+            "type": "http://www.w3.org/ns/dcat#Distribution"
+          },
+          {
+            "_about": "http://datos.gob.es/catalogo/ea0010587-ponderaciones-ipv-nacional-general-vivienda-nueva-y-de-segunda-mano-anual-comunidades-autonomas-indice-de-precios-de-la-vivienda-ipv-identificador-api-21871/resource/ee3e10c6-c348-478f-b9c4-20691f6a3447",
+            "accessURL": "http://www.ine.es/jaxiT3/files/t/es/csv/2187.csv",
+            "format": [
+              {
+                "_about": "http://datos.gob.es/catalogo/ea0010587-ponderaciones-ipv-nacional-general-vivienda-nueva-y-de-segunda-mano-anual-comunidades-autonomas-indice-de-precios-de-la-vivienda-ipv-identificador-api-21871/resource/ee3e10c6-c348-478f-b9c4-20691f6a3447/format",
+                "type": "http://purl.org/dc/terms/IMT",
+                "value": "text/csv"
+              },
+              "http://publications.europa.eu/resource/authority/file-type/CSV"
+            ],
+            "title": [
+              "CSV separado por tabuladores",
+              "CSV separated by tab"
+            ],
+            "type": "http://www.w3.org/ns/dcat#Distribution"
+          },
+          {
+            "_about": "http://datos.gob.es/catalogo/ea0010587-ponderaciones-ipv-nacional-general-vivienda-nueva-y-de-segunda-mano-anual-comunidades-autonomas-indice-de-precios-de-la-vivienda-ipv-identificador-api-21871/resource/ffb6deae-0faa-46ba-acd9-e5d75f0753ca",
+            "accessURL": "http://www.ine.es/jaxiT3/files/t/es/xls/2187.xls",
+            "format": [
+              {
+                "_about": "http://datos.gob.es/catalogo/ea0010587-ponderaciones-ipv-nacional-general-vivienda-nueva-y-de-segunda-mano-anual-comunidades-autonomas-indice-de-precios-de-la-vivienda-ipv-identificador-api-21871/resource/ffb6deae-0faa-46ba-acd9-e5d75f0753ca/format",
+                "type": "http://purl.org/dc/terms/IMT",
+                "value": "application/vnd.ms-excel"
+              },
+              "http://publications.europa.eu/resource/authority/file-type/XLS"
+            ],
+            "title": [
+              "Excel: Extensión XLS",
+              "Excel: XLS extension"
+            ],
+            "type": "http://www.w3.org/ns/dcat#Distribution"
+          }
+        ],
+        "identifier": "urn:ine%3Aes%3ATABLA%3AT3%3A48%3A2187",
+        "keyword": [
+          "Andalucía",
+          "Aragón",
+          "Asturias  Principado de",
+          "Autonomous Communities and Cities",
+          "Balears  Illes",
+          "Base",
+          "Base 2007",
+          "Canarias",
+          "Cantabria",
+          "Castilla - La Mancha",
+          "Castilla y León",
+          "Cataluña",
+          "Ceuta",
+          "Comunidades y Ciudades Autónomas",
+          "Comunitat Valenciana",
+          "Construcción y vivienda",
+          "Construction and housing",
+          "Estadísticas",
+          "Extremadura",
+          "Galicia",
+          "General",
+          "General  vivienda nueva y de segunda mano",
+          "IPV",
+          "Indices and rates",
+          "Madrid  Comunidad de",
+          "Melilla",
+          "Murcia  Región de",
+          "National Total",
+          "Navarra  Comunidad Foral de",
+          "New dwelling",
+          "País Vasco",
+          "Ponderación",
+          "Precios",
+          "Precios de las distintas actividades sectoriales",
+          "Prices",
+          "Prices of the different sectoral activities",
+          "Rioja  La",
+          "Second-hand dwelling",
+          "Statistics",
+          "Total Nacional",
+          "Vivienda nueva",
+          "Vivienda segunda mano",
+          "Weighting",
+          "Índices y tasas"
+        ],
+        "modified": "mié, 21 mar 2018 15:00:39 GMT+0000",
+        "publisher": "http://datos.gob.es/recurso/sector-publico/org/Organismo/EA0010587",
+        "spatial": [
+          "http://datos.gob.es/recurso/sector-publico/territorio/Autonomia/Andalucia",
+          "http://datos.gob.es/recurso/sector-publico/territorio/Autonomia/Aragon",
+          "http://datos.gob.es/recurso/sector-publico/territorio/Autonomia/Canarias",
+          "http://datos.gob.es/recurso/sector-publico/territorio/Autonomia/Cantabria",
+          "http://datos.gob.es/recurso/sector-publico/territorio/Autonomia/Castilla-La-Mancha",
+          "http://datos.gob.es/recurso/sector-publico/territorio/Autonomia/Castilla-Leon",
+          "http://datos.gob.es/recurso/sector-publico/territorio/Autonomia/Cataluna",
+          "http://datos.gob.es/recurso/sector-publico/territorio/Autonomia/Ceuta",
+          "http://datos.gob.es/recurso/sector-publico/territorio/Autonomia/Comunidad-Foral-Navarra",
+          "http://datos.gob.es/recurso/sector-publico/territorio/Autonomia/Comunidad-Madrid",
+          "http://datos.gob.es/recurso/sector-publico/territorio/Autonomia/Comunitat-Valenciana",
+          "http://datos.gob.es/recurso/sector-publico/territorio/Autonomia/Extremadura",
+          "http://datos.gob.es/recurso/sector-publico/territorio/Autonomia/Galicia",
+          "http://datos.gob.es/recurso/sector-publico/territorio/Autonomia/Illes-Balears",
+          "http://datos.gob.es/recurso/sector-publico/territorio/Autonomia/La-Rioja",
+          "http://datos.gob.es/recurso/sector-publico/territorio/Autonomia/Melilla",
+          "http://datos.gob.es/recurso/sector-publico/territorio/Autonomia/Pais-Vasco",
+          "http://datos.gob.es/recurso/sector-publico/territorio/Autonomia/Principado-Asturias",
+          "http://datos.gob.es/recurso/sector-publico/territorio/Autonomia/Region-Murcia"
+        ],
+        "theme": [
+          "http://datos.gob.es/kos/sector-publico/sector/economia",
+          "http://datos.gob.es/kos/sector-publico/sector/vivienda"
+        ],
+        "title": [
+          "Ponderaciones IPV nacional  general  vivienda nueva y de segunda mano. Anual. Comunidades autónomas.  Índice de Precios de la Vivienda  IPV   (Identificador API:  2187)",
+          "Weightings HPI national  general  new dwelling and second-hand dwelling. Annual. Comunidades autónomas.  Housing Price Index  HPI   (API identifier: 2187)"
+        ],
+        "type": "http://www.w3.org/ns/dcat#Dataset"
+      },
+      {
+        "_about": "http://datos.gob.es/catalogo/ea0010587-ponderaciones-ipv-nacional-general-vivienda-nueva-y-de-segunda-mano-anual-comunidades-autonomas-indice-de-precios-de-la-vivienda-ipv-identificador-api-251741",
+        "description": [
+          {
+            "_value": "Tabla de INEbase\nPonderaciones IPV nacional  general  vivienda nueva y de segunda mano. Anual. Comunidades autónomas.  Índice de Precios de la Vivienda  IPV",
+            "_lang": "es"
+          },
+          {
+            "_value": "Table of INEBase\nWeightings HPI national  general  new dwelling and second-hand dwelling. Annual. Comunidades autónomas.  Housing Price Index  HPI",
+            "_lang": "en"
+          }
+        ],
+        "distribution": [
+          {
+            "_about": "http://datos.gob.es/catalogo/ea0010587-ponderaciones-ipv-nacional-general-vivienda-nueva-y-de-segunda-mano-anual-comunidades-autonomas-indice-de-precios-de-la-vivienda-ipv-identificador-api-251741/resource/0c2460a3-a9b8-4e6c-8ca1-d5152b1f9482",
+            "accessURL": "http://www.ine.es/jaxiT3/files/t/es/csv_c/25174.csv_c",
+            "format": [
+              {
+                "_about": "http://datos.gob.es/catalogo/ea0010587-ponderaciones-ipv-nacional-general-vivienda-nueva-y-de-segunda-mano-anual-comunidades-autonomas-indice-de-precios-de-la-vivienda-ipv-identificador-api-251741/resource/0c2460a3-a9b8-4e6c-8ca1-d5152b1f9482/format",
+                "type": "http://purl.org/dc/terms/IMT",
+                "value": "text/csv"
+              },
+              "http://publications.europa.eu/resource/authority/file-type/CSV"
+            ],
+            "title": [
+              "CSV separado por ,",
+              "CSV separated by comma"
+            ],
+            "type": "http://www.w3.org/ns/dcat#Distribution"
+          },
+          {
+            "_about": "http://datos.gob.es/catalogo/ea0010587-ponderaciones-ipv-nacional-general-vivienda-nueva-y-de-segunda-mano-anual-comunidades-autonomas-indice-de-precios-de-la-vivienda-ipv-identificador-api-251741/resource/2d718541-97e1-4456-a8a5-4a40ad0afa34",
+            "accessURL": "http://www.ine.es/jaxiT3/Tabla.htm?t=25174",
+            "format": [
+              {
+                "_about": "http://datos.gob.es/catalogo/ea0010587-ponderaciones-ipv-nacional-general-vivienda-nueva-y-de-segunda-mano-anual-comunidades-autonomas-indice-de-precios-de-la-vivienda-ipv-identificador-api-251741/resource/2d718541-97e1-4456-a8a5-4a40ad0afa34/format",
+                "type": "http://purl.org/dc/terms/IMT",
+                "value": "text/html"
+              },
+              "http://publications.europa.eu/resource/authority/file-type/HTML"
+            ],
+            "title": [
+              "Html",
+              "Html"
+            ],
+            "type": "http://www.w3.org/ns/dcat#Distribution"
+          },
+          {
+            "_about": "http://datos.gob.es/catalogo/ea0010587-ponderaciones-ipv-nacional-general-vivienda-nueva-y-de-segunda-mano-anual-comunidades-autonomas-indice-de-precios-de-la-vivienda-ipv-identificador-api-251741/resource/36809166-fd0b-45ee-9728-5495c7bdea68",
+            "accessURL": "http://www.ine.es/jaxiT3/files/t/es/xlsx/25174.xlsx",
+            "format": [
+              {
+                "_about": "http://datos.gob.es/catalogo/ea0010587-ponderaciones-ipv-nacional-general-vivienda-nueva-y-de-segunda-mano-anual-comunidades-autonomas-indice-de-precios-de-la-vivienda-ipv-identificador-api-251741/resource/36809166-fd0b-45ee-9728-5495c7bdea68/format",
+                "type": "http://purl.org/dc/terms/IMT",
+                "value": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+              },
+              "http://publications.europa.eu/resource/authority/file-type/XLSX"
+            ],
+            "title": [
+              "Excel: Extension XLSx",
+              "Excel: XLSx extension"
+            ],
+            "type": "http://www.w3.org/ns/dcat#Distribution"
+          },
+          {
+            "_about": "http://datos.gob.es/catalogo/ea0010587-ponderaciones-ipv-nacional-general-vivienda-nueva-y-de-segunda-mano-anual-comunidades-autonomas-indice-de-precios-de-la-vivienda-ipv-identificador-api-251741/resource/7c9938a3-fd73-4ed5-9f67-ed0da44e001f",
+            "accessURL": "http://www.ine.es/jaxiT3/files/t/es/xls/25174.xls",
+            "format": [
+              {
+                "_about": "http://datos.gob.es/catalogo/ea0010587-ponderaciones-ipv-nacional-general-vivienda-nueva-y-de-segunda-mano-anual-comunidades-autonomas-indice-de-precios-de-la-vivienda-ipv-identificador-api-251741/resource/7c9938a3-fd73-4ed5-9f67-ed0da44e001f/format",
+                "type": "http://purl.org/dc/terms/IMT",
+                "value": "application/vnd.ms-excel"
+              },
+              "http://publications.europa.eu/resource/authority/file-type/XLS"
+            ],
+            "title": [
+              "Excel: Extensión XLS",
+              "Excel: XLS extension"
+            ],
+            "type": "http://www.w3.org/ns/dcat#Distribution"
+          },
+          {
+            "_about": "http://datos.gob.es/catalogo/ea0010587-ponderaciones-ipv-nacional-general-vivienda-nueva-y-de-segunda-mano-anual-comunidades-autonomas-indice-de-precios-de-la-vivienda-ipv-identificador-api-251741/resource/9327e483-3132-40df-94f0-83b512c9f747",
+            "accessURL": "http://servicios.ine.es/wstempus/js/es/DATOS_TABLA/25174?tip=AM",
+            "format": [
+              {
+                "_about": "http://datos.gob.es/catalogo/ea0010587-ponderaciones-ipv-nacional-general-vivienda-nueva-y-de-segunda-mano-anual-comunidades-autonomas-indice-de-precios-de-la-vivienda-ipv-identificador-api-251741/resource/9327e483-3132-40df-94f0-83b512c9f747/format",
+                "type": "http://purl.org/dc/terms/IMT",
+                "value": "application/json"
+              },
+              "http://publications.europa.eu/resource/authority/file-type/JSON"
+            ],
+            "title": [
+              "Json",
+              "Json"
+            ],
+            "type": "http://www.w3.org/ns/dcat#Distribution"
+          },
+          {
+            "_about": "http://datos.gob.es/catalogo/ea0010587-ponderaciones-ipv-nacional-general-vivienda-nueva-y-de-segunda-mano-anual-comunidades-autonomas-indice-de-precios-de-la-vivienda-ipv-identificador-api-251741/resource/a91454db-eeb3-4a7a-94a3-c554e486ee2f",
+            "accessURL": "http://www.ine.es/jaxiT3/files/t/es/csv_sc/25174.csv_sc",
+            "format": [
+              {
+                "_about": "http://datos.gob.es/catalogo/ea0010587-ponderaciones-ipv-nacional-general-vivienda-nueva-y-de-segunda-mano-anual-comunidades-autonomas-indice-de-precios-de-la-vivienda-ipv-identificador-api-251741/resource/a91454db-eeb3-4a7a-94a3-c554e486ee2f/format",
+                "type": "http://purl.org/dc/terms/IMT",
+                "value": "text/csv"
+              },
+              "http://publications.europa.eu/resource/authority/file-type/CSV"
+            ],
+            "title": [
+              "CSV separado por ;",
+              "CSV separated by semicolons"
+            ],
+            "type": "http://www.w3.org/ns/dcat#Distribution"
+          },
+          {
+            "_about": "http://datos.gob.es/catalogo/ea0010587-ponderaciones-ipv-nacional-general-vivienda-nueva-y-de-segunda-mano-anual-comunidades-autonomas-indice-de-precios-de-la-vivienda-ipv-identificador-api-251741/resource/ddcfe694-ad48-46a8-a02b-0796b38c7f31",
+            "accessURL": "http://www.ine.es/jaxiT3/files/t/es/px/25174.px",
+            "format": [
+              {
+                "_about": "http://datos.gob.es/catalogo/ea0010587-ponderaciones-ipv-nacional-general-vivienda-nueva-y-de-segunda-mano-anual-comunidades-autonomas-indice-de-precios-de-la-vivienda-ipv-identificador-api-251741/resource/ddcfe694-ad48-46a8-a02b-0796b38c7f31/format",
+                "type": "http://purl.org/dc/terms/IMT",
+                "value": "text/pc-axis"
+              },
+              "http://publications.europa.eu/resource/authority/file-type/PC-Axis"
+            ],
+            "title": [
+              "Pc-Axis",
+              "Pc-Axis"
+            ],
+            "type": "http://www.w3.org/ns/dcat#Distribution"
+          },
+          {
+            "_about": "http://datos.gob.es/catalogo/ea0010587-ponderaciones-ipv-nacional-general-vivienda-nueva-y-de-segunda-mano-anual-comunidades-autonomas-indice-de-precios-de-la-vivienda-ipv-identificador-api-251741/resource/fec52d0b-db19-46dd-a269-cea53c75736a",
+            "accessURL": "http://www.ine.es/jaxiT3/files/t/es/csv/25174.csv",
+            "format": [
+              {
+                "_about": "http://datos.gob.es/catalogo/ea0010587-ponderaciones-ipv-nacional-general-vivienda-nueva-y-de-segunda-mano-anual-comunidades-autonomas-indice-de-precios-de-la-vivienda-ipv-identificador-api-251741/resource/fec52d0b-db19-46dd-a269-cea53c75736a/format",
+                "type": "http://purl.org/dc/terms/IMT",
+                "value": "text/csv"
+              },
+              "http://publications.europa.eu/resource/authority/file-type/CSV"
+            ],
+            "title": [
+              "CSV separado por tabuladores",
+              "CSV separated by tab"
+            ],
+            "type": "http://www.w3.org/ns/dcat#Distribution"
+          }
+        ],
+        "identifier": "urn:ine%3Aes%3ATABLA%3AT3%3A48%3A25174",
+        "keyword": [
+          "Andalucía",
+          "Aragón",
+          "Asturias  Principado de",
+          "Autonomous Communities and Cities",
+          "Balears  Illes",
+          "Canarias",
+          "Cantabria",
+          "Castilla - La Mancha",
+          "Castilla y León",
+          "Cataluña",
+          "Ceuta",
+          "Comunidades y Ciudades Autónomas",
+          "Comunitat Valenciana",
+          "Construcción y vivienda",
+          "Construction and housing",
+          "Estadísticas",
+          "Extremadura",
+          "Galicia",
+          "General",
+          "General  vivienda nueva y de segunda mano",
+          "IPV",
+          "Index type",
+          "Indices and rates",
+          "Madrid  Comunidad de",
+          "Melilla",
+          "Murcia  Región de",
+          "National Total",
+          "Navarra  Comunidad Foral de",
+          "New dwelling",
+          "País Vasco",
+          "Ponderación",
+          "Precios",
+          "Precios de las distintas actividades sectoriales",
+          "Prices",
+          "Prices of the different sectoral activities",
+          "Rioja  La",
+          "Second-hand dwelling",
+          "Statistics",
+          "Total Nacional",
+          "Vivienda nueva",
+          "Vivienda segunda mano",
+          "Weighting",
+          "Índices y tasas"
+        ],
+        "modified": "mar, 09 jun 2020 09:00:04 GMT+0000",
+        "publisher": "http://datos.gob.es/recurso/sector-publico/org/Organismo/EA0010587",
+        "spatial": [
+          "http://datos.gob.es/recurso/sector-publico/territorio/Autonomia/Andalucia",
+          "http://datos.gob.es/recurso/sector-publico/territorio/Autonomia/Aragon",
+          "http://datos.gob.es/recurso/sector-publico/territorio/Autonomia/Canarias",
+          "http://datos.gob.es/recurso/sector-publico/territorio/Autonomia/Cantabria",
+          "http://datos.gob.es/recurso/sector-publico/territorio/Autonomia/Castilla-La-Mancha",
+          "http://datos.gob.es/recurso/sector-publico/territorio/Autonomia/Castilla-Leon",
+          "http://datos.gob.es/recurso/sector-publico/territorio/Autonomia/Cataluna",
+          "http://datos.gob.es/recurso/sector-publico/territorio/Autonomia/Ceuta",
+          "http://datos.gob.es/recurso/sector-publico/territorio/Autonomia/Comunidad-Foral-Navarra",
+          "http://datos.gob.es/recurso/sector-publico/territorio/Autonomia/Comunidad-Madrid",
+          "http://datos.gob.es/recurso/sector-publico/territorio/Autonomia/Comunitat-Valenciana",
+          "http://datos.gob.es/recurso/sector-publico/territorio/Autonomia/Extremadura",
+          "http://datos.gob.es/recurso/sector-publico/territorio/Autonomia/Galicia",
+          "http://datos.gob.es/recurso/sector-publico/territorio/Autonomia/Illes-Balears",
+          "http://datos.gob.es/recurso/sector-publico/territorio/Autonomia/La-Rioja",
+          "http://datos.gob.es/recurso/sector-publico/territorio/Autonomia/Melilla",
+          "http://datos.gob.es/recurso/sector-publico/territorio/Autonomia/Pais-Vasco",
+          "http://datos.gob.es/recurso/sector-publico/territorio/Autonomia/Principado-Asturias",
+          "http://datos.gob.es/recurso/sector-publico/territorio/Autonomia/Region-Murcia"
+        ],
+        "theme": [
+          "http://datos.gob.es/kos/sector-publico/sector/economia",
+          "http://datos.gob.es/kos/sector-publico/sector/vivienda"
+        ],
+        "title": [
+          "Ponderaciones IPV nacional  general  vivienda nueva y de segunda mano. Anual. Comunidades autónomas.  Índice de Precios de la Vivienda  IPV   (Identificador API:  25174)",
+          "Weightings HPI national  general  new dwelling and second-hand dwelling. Annual. Comunidades autónomas.  Housing Price Index  HPI   (API identifier: 25174)"
+        ],
+        "type": "http://www.w3.org/ns/dcat#Dataset"
+      }
+    ],
+    "itemsPerPage": 10,
+    "page": 0,
+    "startIndex": 1,
+    "type": "http://purl.org/linked-data/api/vocab#Page"
+  }
+}

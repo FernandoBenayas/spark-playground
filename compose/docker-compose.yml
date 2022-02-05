@@ -1,0 +1,71 @@
+version: "3.8"
+services:
+    spark-master:
+        image: fernandobenayas/spark:master
+        container_name: spark-master
+        ports: 
+            - "4040:4040"
+            - "8080:8080"
+            - "18080:18080"
+            - "7077"
+        networks:
+            - sparknet
+        env_file: 
+            - master.env
+        deploy:
+            restart_policy:
+                condition: on-failure
+        volumes:
+            - ../tmp/eonet_api.json:/opt/eonet_api.json
+            - ../tmp/ipv_api.json:/opt/ipv_api.json
+            - ../tmp/mortages_data_es.json:/opt/mortages_data_es.json
+            - ../tmp/AMZN.csv:/opt/AMZN.csv
+            - ../src:/home/projects
+    spark-worker-1:
+        image: fernandobenayas/spark:worker
+        container_name: spark-worker-1
+        ports: 
+            - "8081:8081"
+            - "7077"
+        networks:
+            - sparknet
+        env_file: 
+            - worker.env
+        deploy:
+            restart_policy:
+                condition: on-failure
+        volumes:
+            - ../tmp/eonet_api.json:/opt/eonet_api.json
+            - ../tmp/ipv_api.json:/opt/ipv_api.json
+            - ../tmp/mortages_data_es.json:/opt/mortages_data_es.json
+            - ../tmp/AMZN.csv:/opt/AMZN.csv
+    spark-worker-2:
+        image: fernandobenayas/spark:worker
+        container_name: spark-worker-2
+        ports: 
+            - "8082:8081"
+            - "7077"
+        networks:
+            - sparknet
+        env_file: 
+            - worker.env
+        deploy:
+            restart_policy:
+                condition: on-failure
+        volumes:
+            - ../tmp/eonet_api.json:/opt/eonet_api.json
+            - ../tmp/ipv_api.json:/opt/ipv_api.json
+            - ../tmp/mortages_data_es.json:/opt/mortages_data_es.json
+            - ../tmp/AMZN.csv:/opt/AMZN.csv
+    data-server:
+        image: fernandobenayas/spark:data-server
+        container_name: dataserver
+        ports:
+            - "9090:9090"
+        networks:
+            - sparknet
+        deploy:
+            restart_policy:
+                condition: on-failure
+networks:
+    sparknet:
