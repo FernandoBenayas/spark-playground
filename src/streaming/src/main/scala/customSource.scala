@@ -25,10 +25,12 @@ import org.json4s.DefaultFormats
 import org.joda.time.DateTime
 import scala.util.parsing.json._
 
+/*
+Things to check out
+    - Use checkpointed offsets after a failure (fault-tolerance semantics)
+*/
 
-case class Datapoint(val timestamp: String, val value: Integer)
-
-class DefaultSource extends StreamSourceProvider with DataSourceRegister {
+class DefaultCustomSource extends StreamSourceProvider with DataSourceRegister {
     override def shortName(): String = "CustomSource"
     override def sourceSchema(sqlContext: SQLContext, schema: Option[StructType], providerName: String, parameters: Map[String, String]): (String, StructType) = {
         (shortName(), CustomSource.schema)
@@ -39,7 +41,6 @@ class DefaultSource extends StreamSourceProvider with DataSourceRegister {
 }
 
 // REMEMBER: send stuff to the companion object
-// Is the offset considered as specific to each instance of the class? I would think so
 class CustomSource private (sqlContext: SQLContext) extends Source {
 
     override def schema: StructType = CustomSource.schema
@@ -132,7 +133,7 @@ class CustomSource private (sqlContext: SQLContext) extends Source {
                     reader.close
                     httpClient.getConnectionManager().shutdown()
 
-                    Thread.sleep(200)
+                    Thread.sleep(500)
                 }
             }
         }

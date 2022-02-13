@@ -13,7 +13,7 @@ RUN apt-get --allow-insecure-repositories -y update
 RUN apt-get install --allow-unauthenticated -y sbt
 
 # Installing python packages
-RUN pip install pyspark requests requests_oauthlib
+RUN pip install pyspark requests requests_oauthlib tensorflow tensorflowonspark
 
 # Delete this after you are done with tests
 RUN apt-get install init -y
