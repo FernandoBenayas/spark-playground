@@ -4,7 +4,7 @@ FROM debian:bullseye
 RUN apt-get update -y
 RUN apt-get install default-jdk wget python3 scala r-base r-base-dev \
 procps python3-pip -y
-RUN pip install pyspark requests requests_oauthlib
+RUN pip install pyspark requests requests_oauthlib tensorflow tensorflowonspark
 # Delete this after you are done with tests
 RUN apt-get install init -y
 
