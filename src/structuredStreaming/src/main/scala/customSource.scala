@@ -1,4 +1,4 @@
-// Using org.apache.spark.sql so I can accesss internal methods
+// Using org.apache.spark.sql so we can accesss internal methods
 package org.apache.spark.sql
 
 import org.apache.spark.sql.catalyst.InternalRow
@@ -29,8 +29,9 @@ import scala.util.parsing.json._
 Things to check out
     - Use checkpointed offsets after a failure (fault-tolerance semantics)
 */
+// WARNING - CUSTOM SOURCES IN STRUCTURED STREAMING ARE EXPERIMENTAL
 
-class DefaultCustomSource extends StreamSourceProvider with DataSourceRegister {
+class APICustomSource extends StreamSourceProvider with DataSourceRegister {
     override def shortName(): String = "CustomSource"
     override def sourceSchema(sqlContext: SQLContext, schema: Option[StructType], providerName: String, parameters: Map[String, String]): (String, StructType) = {
         (shortName(), CustomSource.schema)

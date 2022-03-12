@@ -37,7 +37,18 @@ def main_tfo(args, ctx):
     ds = tf.data.Dataset.from_generator(rdd_generator, (tf.float32, tf.float32), (tf.TensorShape([50, 1]), tf.TensorShape([1, 1])))
     ds = ds.batch(args.batch_size)
 
-    lstm_model.fit(X_train, y_train, epochs=EPOCHS)
+    tf.io.gfile.makedirs(args.model_dir)
+    filepath = args.model_dir + "/weights-{epoch:04d}"
+    callbacks = [tf.keras.callbacks.ModelCheckpoint(filepath=filepath, verbose=1, save_weights_only=True)]
+
+    with strategy.scope():
+        multi_worker_model = lstm_model_compile()
+
+    steps_per_epoch = 60000 / args.batch_size
+    steps_per_epoch_per_worker = steps_per_epoch / ctx.num_workers
+    max_steps_per_worker = steps_per_epoch_per_worker * 0.9
+
+    multi_worker_model.fit(X_train, y_train, epochs=args.epochs, steps_per_epoch=max_steps_per_worker, callbacks=callbacks)
 
 
 if __name__ == '__main__':

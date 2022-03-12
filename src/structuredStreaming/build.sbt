@@ -1,4 +1,4 @@
-name := "Use Spark Streaming"
+name := "Use Spark Structured Streaming"
 
 version := "1.0"
 
